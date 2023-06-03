@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +12,6 @@
   h2,
   h3,
   h4 {
-    @apply font-Inter text-headingtext;
+    @apply font-DMSans tracking-tight text-headingtext;
   }
 }

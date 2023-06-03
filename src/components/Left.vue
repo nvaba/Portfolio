@@ -5,7 +5,7 @@
 
       <p>Web Developer and Designer</p>
 
-      <p class="mt-[10rem]">
+      <p class="mt-[12rem]">
         Specializing in simplicity <br />
         and functionality
       </p>
