@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Left from "./components/Left.vue";
+import Right from "./components/Right.vue";
 </script>
 
 <template>
   <Left />
-
-  <div id="right"></div>
+  <Right />
 </template>
 
 <style scoped></style>
