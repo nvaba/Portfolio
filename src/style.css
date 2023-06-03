@@ -14,4 +14,8 @@
   h4 {
     @apply font-DMSans tracking-tight text-headingtext;
   }
+
+  h2 {
+    @apply text-[1.4rem];
+  }
 }
