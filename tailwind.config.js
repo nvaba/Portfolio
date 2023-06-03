@@ -13,6 +13,7 @@ export default {
       text: "#797979",
       headingtext: "#DFDFDF",
       accent: "7B8DA3",
+      navigation: "#303030",
     },
   },
   plugins: [],
