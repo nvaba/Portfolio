@@ -20,7 +20,7 @@
   }
 
   h3 {
-    @apply text-[1.2rem];
+    @apply text-[1.3rem];
   }
 
   h4 {
@@ -29,6 +29,10 @@
 
   p {
     @apply text-[1rem];
+  }
+
+  button {
+    @apply mr-[0.5rem];
   }
 }
 
@@ -39,8 +43,4 @@
 .project-external-link {
   display: block;
   color: #7b8da3;
-}
-
-button {
-  margin-right: 0.5rem;
 }
