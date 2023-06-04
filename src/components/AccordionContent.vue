@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <h4>{{ item.acf.overview_title }}</h4>
-
-    <p class="projecttext mt-1">{{ item.acf.overview_text }}</p>
-
-    <nav class="mt-2">
-      <a class="project-external-link" :href="item.acf.live_website_url"
-        >Live Site</a
-      >
-      <a class="project-external-link" :href="item.acf.repo_url"
-        >View Repository</a
-      >
-    </nav>
+  <div class="mt-3">
+    <section>
+      <h4>{{ item.acf.overview_title }}</h4>
+      <p class="projecttext mt-2">{{ item.acf.overview_text }}</p>
+      <nav class="mt-3">
+        <a class="project-external-link" :href="item.acf.live_website_url"
+          >Live Site</a
+        >
+        <a class="project-external-link" :href="item.acf.repo_url"
+          >View Repository</a
+        >
+      </nav>
+    </section>
 
     <section>
-      <div class="mt-5">
+      <div class="mt-7">
         <button
           @click="activeTab = 'tab1'"
           :class="{ active: activeTab === 'tab1' }"
