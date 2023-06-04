@@ -1,7 +1,9 @@
 <template>
   <div id="right">
-    <section>
-      <h2>Featured Projects</h2>
-    </section>
+    <FeaturedProjects />
   </div>
 </template>
+
+<script setup lang="ts">
+import FeaturedProjects from "./FeaturedProjects.vue";
+</script>
