@@ -31,3 +31,11 @@
     @apply text-[1rem];
   }
 }
+
+.projecttext {
+  font-size: 0.9rem;
+}
+.project-external-link {
+  display: block;
+  color: #7b8da3;
+}
