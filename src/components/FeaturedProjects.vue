@@ -6,7 +6,7 @@
         class="flex cursor-pointer items-center justify-between"
         @click="toggleAccordion(item.id)"
       >
-        <h3>{{ item.title }}</h3>
+        <h3>{{ item.title.rendered }}</h3>
         <div>
           <svg
             class="h-7 transform transition-transform duration-300"
@@ -19,23 +19,38 @@
         </div>
       </div>
       <div v-show="activeAccordionItem === item.id" class="mt-2">
-        <p>{{ item.content }}</p>
+        <AccordionContent :item="item" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import axios from "axios";
+import AccordionContent from "./AccordionContent.vue";
 
-const accordionItems = [
-  {
-    id: 1,
-    title: "N/A Films",
-    content: "Content of Accordion Item #1",
-  },
-  // Add more accordion items here
-];
+interface AccordionItem {
+  id: number;
+  title: {
+    rendered: string;
+  };
+  // Add more properties as needed
+}
+
+const accordionItems = ref<AccordionItem[]>([]);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get(
+      "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects"
+    );
+    accordionItems.value = response.data; // Assuming the API response is an array of accordion items
+    console.log(response.data); // Log the API response
+  } catch (error) {
+    console.error("Failed to fetch accordion items:", error);
+  }
+});
 
 const activeAccordionItem = ref<number | null>(null);
 
