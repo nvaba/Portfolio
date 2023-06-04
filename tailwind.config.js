@@ -12,7 +12,7 @@ export default {
       background: "#1E1E1E",
       text: "#797979",
       headingtext: "#DFDFDF",
-      accent: "7B8DA3",
+      accent: "#7B8DA3",
       navigation: "#303030",
     },
   },
