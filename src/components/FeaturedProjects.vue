@@ -1,22 +1,27 @@
 <template>
   <section>
     <h2>Featured Projects</h2>
-    <div v-for="item in accordionItems" :key="item.id">
+    <div class="mt-2" v-for="item in accordionItems" :key="item.id">
       <div
         class="flex cursor-pointer items-center justify-between"
         @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
-        <div>
-          <svg
-            class="h-7 transform transition-transform duration-300"
-            :class="{ 'rotate-180': activeAccordionItem === item.id }"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path fill="currentColor" d="M7 10l5 5 5-5z" />
-          </svg>
-        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          class="h-7 transform transition-transform duration-300"
+          :class="{ 'rotate-180': activeAccordionItem === item.id }"
+        >
+          <path
+            fill="none"
+            stroke="#f8f8f8"
+            stroke-linecap="square"
+            d="m14 5l-6.5 7L1 5"
+          />
+        </svg>
       </div>
       <div v-show="activeAccordionItem === item.id" class="mt-2">
         <AccordionContent :item="item" />
