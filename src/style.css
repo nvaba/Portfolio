@@ -33,9 +33,14 @@
 }
 
 .projecttext {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
+
 .project-external-link {
   display: block;
   color: #7b8da3;
+}
+
+button {
+  margin-right: 0.5rem;
 }
