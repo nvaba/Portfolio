@@ -39,9 +39,5 @@ interface AccordionContentProps {
 const props = defineProps<AccordionContentProps>();
 
 // Output the received data
-console.log(props.item.acf.live_website_url); // Using dot notation
+console.log(props.item.acf.live_website_url);
 </script>
-
-<style scoped>
-/* Add styles as needed */
-</style>
