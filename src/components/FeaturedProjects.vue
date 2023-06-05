@@ -1,7 +1,11 @@
 <template>
   <section>
-    <h2 class="lg:mt-12">Featured Projects</h2>
-    <div class="mt-2" v-for="item in accordionItems" :key="item.id">
+    <h2 class="lg:mt-20">Featured Projects</h2>
+    <div
+      class="mt-2 border-b border-text pb-3"
+      v-for="item in accordionItems"
+      :key="item.id"
+    >
       <div
         class="flex cursor-pointer items-center justify-between"
         @click="toggleAccordion(item.id)"

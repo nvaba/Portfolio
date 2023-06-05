@@ -1,5 +1,5 @@
 <template>
-  <div id="right" class="lg:w-1/2">
+  <div id="right" class="lg:w-1/2 lg:border-l lg:border-text lg:pl-32">
     <FeaturedProjects />
     <VisualArts />
   </div>

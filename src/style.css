@@ -5,7 +5,7 @@
 
 @layer base {
   #app {
-    @apply relative bg-background p-8 font-Poppins text-text md:px-20 lg:flex;
+    @apply relative overflow-hidden bg-background px-8 font-Poppins text-text md:px-20 lg:flex lg:px-32;
   }
 
   h1,
