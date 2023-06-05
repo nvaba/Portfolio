@@ -1,15 +1,23 @@
 <template>
-  <h4 class="mt-4">{{ item.acf.tab_1_repeater[0].tab_1_heading_1 }}</h4>
   <div>
-    <img :src="item.acf.tab_1_repeater[0].preview_gif" alt="" />
+    <article
+      v-for="section in item.acf.tab_1_repeater"
+      :key="section.tab_1_heading_1"
+    >
+      <h4 class="mt-4">{{ section.tab_1_heading_1 }}</h4>
+      <div class="mt-4">
+        <img :src="section.preview_gif" alt="" />
+      </div>
+      <p class="mt-5">
+        {{ section.tab_1_text_area }}
+      </p>
+    </article>
   </div>
-
-  <p class="mt-5">
-    {{ item.acf.tab_1_repeater[0].tab_1_text_area }}
-  </p>
 </template>
 
 <script setup lang="ts">
+import { defineProps } from "vue";
+
 interface AccordionContentProps {
   item: {
     id: number;
