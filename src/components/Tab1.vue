@@ -1,5 +1,12 @@
 <template>
   <h4 class="mt-4">{{ item.acf.tab_1_repeater[0].tab_1_heading_1 }}</h4>
+  <div>
+    <img :src="item.acf.tab_1_repeater[0].preview_gif" alt="" />
+  </div>
+
+  <p class="mt-5">
+    {{ item.acf.tab_1_repeater[0].tab_1_text_area }}
+  </p>
 </template>
 
 <script setup lang="ts">
@@ -30,5 +37,5 @@ interface AccordionContentProps {
 
 // Define the props
 const props = defineProps<AccordionContentProps>();
-console.log(props.item.acf.repo_url);
+console.log(props.item.acf.tab_1_repeater[0].preview_gif);
 </script>

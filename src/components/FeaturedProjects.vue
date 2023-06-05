@@ -48,7 +48,7 @@ const accordionItems = ref<AccordionItem[]>([]);
 onMounted(async () => {
   try {
     const response = await axios.get(
-      "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects"
+      "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects?acf_format=standard"
     );
     accordionItems.value = response.data; // Assuming the API response is an array of accordion items
     console.log(response.data); // Log the API response

@@ -74,13 +74,13 @@ interface AccordionContentProps {
 }
 
 // Define the props
-const props = defineProps<AccordionContentProps>();
+defineProps<AccordionContentProps>();
 
 // Define the activeTab ref
 const activeTab = ref("tab1");
 
 // Output the received data
-console.log(props.item.acf.live_website_url);
+// console.log(props.item.acf.live_website_url);
 </script>
 
 <style scoped>
