@@ -5,7 +5,7 @@
 
 @layer base {
   #app {
-    @apply relative bg-background p-8 font-Poppins text-text;
+    @apply relative bg-background p-8 font-Poppins text-text md:p-20;
   }
 
   h1,
@@ -43,4 +43,10 @@
 .project-external-link {
   display: block;
   color: #7b8da3;
+}
+
+.imagediv {
+  margin-inline: auto;
+  max-height: 21.875rem;
+  max-width: 37.5rem;
 }
