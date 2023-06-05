@@ -4,7 +4,7 @@
     width="48"
     height="48"
     viewBox="0 0 48 48"
-    class="hoverUpDown absolute left-1/2 top-[70%] -translate-x-1/2 transform lg:hidden"
+    class="hoverUpDown absolute left-1/2 top-[77%] -translate-x-1/2 transform lg:hidden"
   >
     <path
       fill="none"

@@ -9,8 +9,8 @@
         Specializing in simplicity <br />
         and functionality
       </p>
+      <DownSVG />
     </div>
-    <DownSVG />
   </div>
 </template>
 
