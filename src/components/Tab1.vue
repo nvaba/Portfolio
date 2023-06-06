@@ -6,7 +6,7 @@
     >
       <h4 class="mt-8">{{ section.tab_1_heading_1 }}</h4>
       <div class="imagediv mt-4">
-        <img :src="section.preview_gif" alt="" />
+        <img :src="section.preview_gif.url" :alt="section.preview_gif.alt" />
       </div>
       <p class="mt-5">
         {{ section.tab_1_text_area }}
@@ -33,7 +33,10 @@ interface AccordionContentProps {
       tab_title_2: string;
       tab_title_3: string;
       tab_1_repeater: {
-        preview_gif: string;
+        preview_gif: {
+          url: string;
+          alt: string;
+        };
         tab_1_heading_1: string;
         tab_1_text_area: string;
         // Add more properties as needed
@@ -45,5 +48,5 @@ interface AccordionContentProps {
 
 // Define the props
 const props = defineProps<AccordionContentProps>();
-console.log(props.item.acf.tab_1_repeater[0].preview_gif);
+console.log(props.item.acf.tab_1_repeater[0].preview_gif.alt);
 </script>
