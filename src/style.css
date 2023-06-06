@@ -46,9 +46,6 @@
   #site-wrapper {
     min-height: 100vh;
   }
-  #right {
-    min-height: 100vh;
-  }
 }
 
 .projecttext {
@@ -64,4 +61,10 @@
   margin-inline: auto;
   max-height: 21.875rem;
   max-width: 37.5rem;
+}
+
+@media (min-width: 1024px) {
+  #right {
+    min-height: 100vh;
+  }
 }

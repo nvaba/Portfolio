@@ -4,7 +4,7 @@
       v-for="section in item.acf.tab_1_repeater"
       :key="section.tab_1_heading_1"
     >
-      <h4 class="mt-4">{{ section.tab_1_heading_1 }}</h4>
+      <h4 class="mt-8">{{ section.tab_1_heading_1 }}</h4>
       <div class="imagediv mt-4">
         <img :src="section.preview_gif" alt="" />
       </div>
