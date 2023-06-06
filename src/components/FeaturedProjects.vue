@@ -1,11 +1,8 @@
 <template>
   <section>
     <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
-    <div
-      class="mt-2 border-b border-text pb-3"
-      v-for="item in accordionItems"
-      :key="item.id"
-    >
+    <!-- div below is where border goes border-b border-text -->
+    <div class="mt-2 pb-3" v-for="item in accordionItems" :key="item.id">
       <div
         class="flex cursor-pointer items-center justify-between"
         @click="toggleAccordion(item.id)"
@@ -27,9 +24,11 @@
           />
         </svg>
       </div>
-      <div v-show="activeAccordionItem === item.id" class="mt-2">
-        <AccordionContent :item="item" />
-      </div>
+      <transition name="accordion">
+        <div v-show="activeAccordionItem === item.id" class="mt-2">
+          <AccordionContent :item="item" />
+        </div>
+      </transition>
     </div>
   </section>
 </template>
@@ -72,5 +71,24 @@ const toggleAccordion = (itemId: number) => {
 <style scoped>
 .rotate-180 {
   transform: rotate(180deg);
+}
+
+/* Modify the transition styles */
+.accordion-enter-active,
+.accordion-leave-active {
+  transition: max-height 0.3s cubic-bezier(0.33, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+.accordion-enter-from,
+.accordion-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-enter-to,
+.accordion-leave-from {
+  max-height: 100%;
+  opacity: 1;
 }
 </style>
