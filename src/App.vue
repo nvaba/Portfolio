@@ -4,8 +4,10 @@ import Right from "./components/Right.vue";
 </script>
 
 <template>
-  <Left />
-  <Right />
+  <div id="site-wrapper">
+    <Left />
+    <Right />
+  </div>
 </template>
 
 <style scoped></style>
