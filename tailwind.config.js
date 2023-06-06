@@ -14,6 +14,8 @@ export default {
       headingtext: "#DFDFDF",
       accent: "#7B8DA3",
       navigation: "#303030",
+      panel: "#191919",
+      panel2: "#1c1c1c",
     },
   },
   plugins: [],

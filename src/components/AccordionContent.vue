@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-3">
+  <div class="mt-3 rounded-lg bg-panel p-5">
     <section>
       <h4>{{ item.acf.overview_title }}</h4>
       <p class="projecttext mt-2">{{ item.acf.overview_text }}</p>
@@ -34,27 +34,29 @@
     </section>
 
     <section>
-      <div class="mt-7 inline-block rounded-md bg-navigation p-2">
-        <button
-          class="mr-[0.5rem]"
-          @click="activeTab = 'tab1'"
-          :class="{ active: activeTab === 'tab1' }"
-        >
-          {{ item.acf.tab_title_1 }}
-        </button>
-        <button
-          class="mr-[0.5rem]"
-          @click="activeTab = 'tab2'"
-          :class="{ active: activeTab === 'tab2' }"
-        >
-          {{ item.acf.tab_title_2 }}
-        </button>
-        <button
-          @click="activeTab = 'tab3'"
-          :class="{ active: activeTab === 'tab3' }"
-        >
-          {{ item.acf.tab_title_3 }}
-        </button>
+      <div class="mt-7 text-center">
+        <div class="mx-auto inline-block rounded-md bg-background p-2">
+          <button
+            class="mr-[0.5rem]"
+            @click="activeTab = 'tab1'"
+            :class="{ active: activeTab === 'tab1' }"
+          >
+            {{ item.acf.tab_title_1 }}
+          </button>
+          <button
+            class="mr-[0.5rem]"
+            @click="activeTab = 'tab2'"
+            :class="{ active: activeTab === 'tab2' }"
+          >
+            {{ item.acf.tab_title_2 }}
+          </button>
+          <button
+            @click="activeTab = 'tab3'"
+            :class="{ active: activeTab === 'tab3' }"
+          >
+            {{ item.acf.tab_title_3 }}
+          </button>
+        </div>
       </div>
 
       <div v-if="activeTab === 'tab1'">
