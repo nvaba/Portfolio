@@ -39,10 +39,6 @@
     @apply text-[1rem];
   }
 
-  button {
-    @apply mr-[0.5rem];
-  }
-
   #site-wrapper {
     min-height: 100vh;
   }

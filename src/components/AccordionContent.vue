@@ -14,14 +14,16 @@
     </section>
 
     <section>
-      <div class="mt-7">
+      <div class="mt-7 inline-block rounded-md bg-navigation p-2">
         <button
+          class="mr-[0.5rem]"
           @click="activeTab = 'tab1'"
           :class="{ active: activeTab === 'tab1' }"
         >
           {{ item.acf.tab_title_1 }}
         </button>
         <button
+          class="mr-[0.5rem]"
           @click="activeTab = 'tab2'"
           :class="{ active: activeTab === 'tab2' }"
         >
