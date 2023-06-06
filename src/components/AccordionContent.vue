@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-3 rounded-lg bg-panel p-5">
+  <article class="mt-3 rounded-lg bg-panel p-5">
     <section>
       <h4>{{ item.acf.overview_title }}</h4>
       <p class="projecttext mt-2">{{ item.acf.overview_text }}</p>
@@ -69,7 +69,7 @@
         <Tab3 :item="item" />
       </div>
     </section>
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">
