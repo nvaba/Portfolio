@@ -22,17 +22,7 @@ import { defineProps } from "vue";
 interface AccordionContentProps {
   item: {
     id: number;
-    title: {
-      rendered: string;
-    };
     acf: {
-      overview_title: string;
-      overview_text: string;
-      live_website_url: string;
-      repo_url: string;
-      tab_1_category: string;
-      tab_2_category: string;
-      tab_3_category: string;
       tab_1_content: {
         tab_1_content_title: string;
         tab_1_content_list: string;
