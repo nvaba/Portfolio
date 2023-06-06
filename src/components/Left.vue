@@ -1,7 +1,7 @@
 <template>
   <div id="left" class="h-screen w-full lg:fixed lg:w-1/2">
     <div class="relative mt-20 h-full">
-      <h1 class="text-[1.75rem]">Nate Abaria</h1>
+      <h1>Nate Abaria</h1>
       <p>Web Developer and Designer</p>
       <p class="mt-[14rem] lg:mt-12">
         Specializing in simplicity <br />

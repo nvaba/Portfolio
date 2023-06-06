@@ -23,6 +23,10 @@
     @apply font-DMSans tracking-tight text-headingtext;
   }
 
+  h1 {
+    @apply text-[1.9rem];
+  }
+
   h2 {
     @apply text-[1.4rem];
   }
