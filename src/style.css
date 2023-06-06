@@ -63,6 +63,10 @@
   max-width: 37.5rem;
 }
 
+svg:hover path {
+  fill: white;
+}
+
 @media (min-width: 1024px) {
   #right {
     min-height: 100vh;
