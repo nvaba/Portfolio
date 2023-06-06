@@ -4,8 +4,16 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-background;
+  }
+
+  body {
+    @apply bg-background;
+  }
+
   #site-wrapper {
-    @apply relative overflow-hidden bg-background px-8 font-Poppins text-text md:px-20 lg:flex lg:px-32;
+    @apply relative overflow-hidden bg-background px-8 font-Poppins text-text md:px-20 lg:flex xl:px-32;
   }
 
   h1,
