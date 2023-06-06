@@ -1,5 +1,8 @@
 <template>
-  <div id="right" class="lg:w-1/2 lg:border-l lg:border-text lg:pl-32">
+  <div
+    id="right"
+    class="overflow-auto lg:ml-auto lg:w-1/2 lg:border-l lg:border-text lg:pl-32"
+  >
     <FeaturedProjects />
     <VisualArts />
     <About />
