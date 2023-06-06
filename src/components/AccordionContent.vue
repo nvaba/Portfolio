@@ -41,20 +41,20 @@
             @click="activeTab = 'tab1'"
             :class="{ active: activeTab === 'tab1' }"
           >
-            {{ item.acf.tab_title_1 }}
+            {{ item.acf.tab_1_category }}
           </button>
           <button
             class="mr-[0.5rem]"
             @click="activeTab = 'tab2'"
             :class="{ active: activeTab === 'tab2' }"
           >
-            {{ item.acf.tab_title_2 }}
+            {{ item.acf.tab_2_category }}
           </button>
           <button
             @click="activeTab = 'tab3'"
             :class="{ active: activeTab === 'tab3' }"
           >
-            {{ item.acf.tab_title_3 }}
+            {{ item.acf.tab_3_category }}
           </button>
         </div>
       </div>
@@ -89,9 +89,9 @@ interface AccordionContentProps {
       overview_text: string;
       live_website_url: string;
       repo_url: string;
-      tab_title_1: string;
-      tab_title_2: string;
-      tab_title_3: string;
+      tab_1_category: string;
+      tab_2_category: string;
+      tab_3_category: string;
     };
     // Add more properties as needed
   };
