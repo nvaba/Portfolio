@@ -34,6 +34,13 @@
   button {
     @apply mr-[0.5rem];
   }
+
+  #site-wrapper {
+    min-height: 100vh;
+  }
+  #right {
+    min-height: 100vh;
+  }
 }
 
 .projecttext {
