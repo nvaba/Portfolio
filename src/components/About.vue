@@ -1,3 +1,3 @@
 <template>
-  <h2 class="mt-[7rem]">About</h2>
+  <h2 id="about" class="mt-[7rem]">About</h2>
 </template>

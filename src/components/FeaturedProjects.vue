@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="lg:mt-20">Featured Projects</h2>
+    <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
     <div
       class="mt-2 border-b border-text pb-3"
       v-for="item in accordionItems"
