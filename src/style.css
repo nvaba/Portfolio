@@ -63,7 +63,8 @@
   max-width: 37.5rem;
 }
 
-svg:hover path {
+.logosvg:hover path,
+.logosvg:active path {
   fill: white;
 }
 

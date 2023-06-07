@@ -10,6 +10,7 @@
             width="28"
             height="28"
             viewBox="0 0 256 256"
+            class="logosvg"
           >
             <path
               fill="#7b8da3"
@@ -23,6 +24,7 @@
             width="28"
             height="28"
             viewBox="0 0 24 24"
+            class="logosvg"
           >
             <path
               fill="#7b8da3"
