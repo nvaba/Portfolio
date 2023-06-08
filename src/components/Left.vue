@@ -1,5 +1,5 @@
 <template>
-  <div id="left" class="h-screen w-full lg:fixed lg:w-1/2">
+  <div id="left" class="fade-in-slide-up h-screen w-full lg:fixed lg:w-1/2">
     <div class="relative mt-20 h-full">
       <h1>Nate Abaria</h1>
       <p>Web Developer and Designer</p>

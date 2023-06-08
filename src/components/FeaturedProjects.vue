@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="fade-in-slide-up">
     <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div

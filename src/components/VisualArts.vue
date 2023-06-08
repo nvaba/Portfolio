@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-[5rem]">
+  <section class="fade-in-slide-up mt-[5rem]">
     <h2 id="visual-arts">Visual Arts</h2>
     <p class="mt-2 text-accent">Gallery Coming Soon</p>
   </section>

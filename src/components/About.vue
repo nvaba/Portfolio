@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="fade-in-slide-up">
     <h2 id="about" class="mt-[5rem]">About</h2>
     <article
       class="about-list mt-2"

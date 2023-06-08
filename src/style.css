@@ -96,6 +96,19 @@
   background-color: #dfdfdf;
 }
 
+.fade-in-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-slide-up 1s forwards ease-out;
+}
+
+@keyframes fade-in-slide-up {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (min-width: 1024px) {
   #right {
     min-height: 100vh;
