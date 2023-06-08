@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 id="about" class="mt-[7rem]">About</h2>
+    <h2 id="about" class="mt-[5rem]">About</h2>
     <article
       class="about-list mt-2"
       v-if="aboutContent.length"

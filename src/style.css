@@ -32,7 +32,7 @@
   }
 
   h3 {
-    @apply text-[1.35rem] xl:text-[1.5rem];
+    @apply text-[1.35rem] xl:text-[1.4rem];
   }
 
   h4 {
