@@ -24,23 +24,24 @@
   }
 
   h1 {
-    @apply text-[1.9rem];
+    @apply text-[1.9rem] xl:text-[2.5rem];
   }
 
   h2 {
-    @apply text-[1.5rem];
+    @apply text-[1.5rem] xl:text-[1.9rem];
   }
 
   h3 {
-    @apply text-[1.35rem];
+    @apply text-[1.35rem] xl:text-[1.5rem];
   }
 
   h4 {
-    @apply text-[1.2rem];
+    @apply text-[1.2rem] xl:text-[1.3rem];
   }
 
-  p {
-    @apply max-w-prose text-[1rem];
+  p,
+  ul {
+    @apply max-w-prose text-[1rem] xl:text-[1.1rem];
   }
 
   ul,
