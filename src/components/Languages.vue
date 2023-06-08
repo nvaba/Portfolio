@@ -1,7 +1,56 @@
 <template>
-  <article class="mt-7">
+  <article class="my-7">
     <h3>Developer Stack</h3>
 
-    <p>test</p>
+    <div
+      v-for="languageItem in languageItems"
+      :key="languageItem.acf.stack_repeater[0].stack_name"
+      class="mt-2 flex flex-wrap gap-4"
+    >
+      <div
+        v-for="stackItem in languageItem.acf.stack_repeater"
+        :key="stackItem.stack_name"
+        class="flex flex-col items-center overflow-hidden"
+      >
+        <img
+          class="block max-h-[40px] max-w-[40px] rounded-2xl"
+          :src="stackItem.stack_image.url"
+          :alt="stackItem.stack_image.alt"
+        />
+        <p class="text-headingtext">{{ stackItem.stack_name }}</p>
+      </div>
+    </div>
   </article>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import axios from "axios";
+
+interface LanguageItem {
+  acf: {
+    stack_repeater: {
+      stack_name: string;
+      stack_image: {
+        url: string;
+        alt: string;
+      };
+    }[];
+  };
+}
+
+const languageItems = ref<LanguageItem[]>([]);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get(
+      "https://nateabaria.ca/naportfolio/wp-json/wp/v2/stack?acf_format=standard"
+    );
+    languageItems.value = response.data;
+
+    console.log(languageItems.value[0].acf.stack_repeater);
+  } catch (error) {
+    console.error("Failed to fetch about items:", error);
+  }
+});
+</script>
