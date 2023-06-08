@@ -4,7 +4,7 @@
     <!-- div below is where border goes border-b border-text -->
     <div class="mt-2 pb-3" v-for="item in accordionItems" :key="item.id">
       <div
-        class="flex cursor-pointer items-center justify-between"
+        class="flex cursor-pointer items-center justify-between transition-transform hover:translate-y-[-2px]"
         @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
