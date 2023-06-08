@@ -4,9 +4,8 @@
 
     <div class="my-6 text-center">
       <div
-        style="display: inline-block; text-align: left"
+        class="learnlist inline-block text-left"
         v-html="props.item.acf.tab_1_content.tab_1_content_list"
-        class="list-div"
       ></div>
     </div>
 
@@ -38,9 +37,3 @@ interface AccordionContentProps {
 const props = defineProps<AccordionContentProps>();
 // console.log(props.item.acf.tab_1_content.tab_1_content_list);
 </script>
-
-<style>
-.list-div ul {
-  list-style-type: disc;
-}
-</style>

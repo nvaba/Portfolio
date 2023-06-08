@@ -40,7 +40,13 @@
   }
 
   p {
-    @apply text-[1rem];
+    @apply max-w-prose text-[1rem];
+  }
+
+  ul,
+  li,
+  ol {
+    @apply list-inside list-disc;
   }
 
   #site-wrapper {
