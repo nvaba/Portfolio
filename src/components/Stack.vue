@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="fade-in-slide-up">
     <h2 id="stack" class="mt-[5rem]">Things I Use</h2>
     <Languages />
     <Software />
