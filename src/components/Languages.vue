@@ -5,7 +5,7 @@
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
-      class="mt-2 grid grid-cols-2 gap-1 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+      class="mt-2 grid grid-cols-2 gap-1 rounded-2xl bg-panel2 p-4 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
     >
       <div
         v-for="stackItem in languageItem.acf.stack_repeater"
