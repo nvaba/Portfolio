@@ -2,9 +2,13 @@
   <section>
     <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
-    <div class="mt-2 pb-3" v-for="item in accordionItems" :key="item.id">
+    <div
+      class="accordion mt-2 rounded-lg p-4"
+      v-for="item in accordionItems"
+      :key="item.id"
+    >
       <div
-        class="flex cursor-pointer items-center justify-between transition-transform hover:translate-y-[-2px]"
+        class="flex cursor-pointer items-center justify-between transition-transform hover:translate-y-[-0.125rem]"
         @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
@@ -76,5 +80,14 @@ const toggleAccordion = (itemId: number) => {
 .accordion-leave-from {
   max-height: 100%;
   opacity: 1;
+}
+
+.accordion {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.accordion:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 </style>
