@@ -39,6 +39,6 @@ onMounted(async () => {
 
 <style>
 .about-list li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 </style>
