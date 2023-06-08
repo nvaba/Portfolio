@@ -1,11 +1,11 @@
 <template>
   <section>
     <h2 id="about" class="mt-[7rem]">About</h2>
-    <div
+    <article
       class="about-list mt-2"
       v-if="aboutContent.length"
       v-html="aboutContent[0].acf.about_list"
-    ></div>
+    ></article>
   </section>
 </template>
 
@@ -29,8 +29,7 @@ onMounted(async () => {
     );
     aboutContent.value = response.data;
 
-    // log the data here
-    console.log(aboutContent.value[0].acf.about_list);
+    // console.log(aboutContent.value[0].acf.about_list);
   } catch (error) {
     console.error("Failed to fetch about items:", error);
   }
