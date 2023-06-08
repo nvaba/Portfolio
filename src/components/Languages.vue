@@ -5,7 +5,7 @@
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
-      class="mt-2 flex flex-wrap gap-4"
+      class="mt-7 grid grid-cols-2 gap-1 md:grid-cols-3 xl:grid-cols-4"
     >
       <div
         v-for="stackItem in languageItem.acf.stack_repeater"
@@ -13,7 +13,7 @@
         class="flex flex-col items-center overflow-hidden"
       >
         <img
-          class="block max-h-[40px] max-w-[40px] rounded-2xl"
+          class="block max-h-[40px] max-w-[40px] rounded-xl"
           :src="stackItem.stack_image.url"
           :alt="stackItem.stack_image.alt"
         />
