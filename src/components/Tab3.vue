@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <article
-      v-for="section in item.acf.tab_3_repeater_content"
-      :key="section.tab_3_content_title"
-    >
-      <h4 class="mt-8">{{ section.tab_3_content_title }}</h4>
-      <div class="imagediv mt-4">
-        <img
-          :src="section.tab_3_content_preview.url"
-          :alt="section.tab_3_content_preview.alt"
-        />
-      </div>
-      <p class="mt-5">
-        {{ section.tab_3_text_area }}
-      </p>
-    </article>
-  </div>
+  <article
+    v-for="section in item.acf.tab_3_repeater_content"
+    :key="section.tab_3_content_title"
+  >
+    <h4 class="mt-8">{{ section.tab_3_content_title }}</h4>
+    <div class="imagediv mt-4">
+      <img
+        :src="section.tab_3_content_preview.url"
+        :alt="section.tab_3_content_preview.alt"
+      />
+    </div>
+    <p class="mt-5">
+      {{ section.tab_3_text_area }}
+    </p>
+  </article>
 </template>
 
 <script setup lang="ts">
