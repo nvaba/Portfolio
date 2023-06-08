@@ -8,7 +8,7 @@
           ><SVGWebsite />
         </a>
         <a class="project-external-link" :href="item.acf.repo_url"
-          ><SVGLinkedin />
+          ><SVGGithub />
         </a>
       </nav>
     </section>
@@ -55,7 +55,7 @@
 <script setup lang="ts">
 import { ref, defineProps } from "vue";
 import SVGWebsite from "./SVGWebsite.vue";
-import SVGLinkedin from "./SVGLinkedin.vue";
+import SVGGithub from "./SVGGithub.vue";
 import Tab1 from "./Tab1.vue";
 import Tab2 from "./Tab2.vue";
 import Tab3 from "./Tab3.vue";
