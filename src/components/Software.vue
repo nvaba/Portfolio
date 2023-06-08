@@ -1,24 +1,24 @@
 <template>
-  <article class="my-2">
-    <h3>Developer Stack</h3>
+  <article class="my-7">
+    <h3>Software and Programs</h3>
 
     <div
       v-for="languageItem in languageItems"
-      :key="languageItem.acf.stack_repeater[0].stack_name"
+      :key="languageItem.acf.software_and_programs_repeater[0].software_name"
       class="mt-2 grid grid-cols-2 gap-1 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
     >
       <div
-        v-for="stackItem in languageItem.acf.stack_repeater"
-        :key="stackItem.stack_name"
+        v-for="stackItem in languageItem.acf.software_and_programs_repeater"
+        :key="stackItem.software_name"
         class="flex flex-col items-center overflow-hidden transition-transform hover:translate-y-[-0.125rem]"
       >
         <img
           class="block max-h-[40px] max-w-[40px] rounded-xl"
-          :src="stackItem.stack_image.url"
-          :alt="stackItem.stack_image.alt"
+          :src="stackItem.software_image.url"
+          :alt="stackItem.software_image.alt"
         />
         <p class="text-[0.9rem] text-headingtext 2xl:text-[1rem]">
-          {{ stackItem.stack_name }}
+          {{ stackItem.software_name }}
         </p>
       </div>
     </div>
@@ -31,9 +31,9 @@ import axios from "axios";
 
 interface LanguageItem {
   acf: {
-    stack_repeater: {
-      stack_name: string;
-      stack_image: {
+    software_and_programs_repeater: {
+      software_name: string;
+      software_image: {
         url: string;
         alt: string;
       };
@@ -50,7 +50,7 @@ onMounted(async () => {
     );
     languageItems.value = response.data;
 
-    console.log(languageItems.value[0].acf.stack_repeater);
+    console.log(languageItems.value[0].acf.software_and_programs_repeater);
   } catch (error) {
     console.error("Failed to fetch about items:", error);
   }
