@@ -85,6 +85,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #797979;
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -92,7 +93,7 @@
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #7b8da3;
+  background-color: #dfdfdf;
 }
 
 @media (min-width: 1024px) {
