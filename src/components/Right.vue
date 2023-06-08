@@ -6,6 +6,7 @@
     <FeaturedProjects />
     <VisualArts />
     <About />
+    <Stack />
   </div>
 </template>
 
@@ -13,4 +14,5 @@
 import FeaturedProjects from "./FeaturedProjects.vue";
 import VisualArts from "./VisualArts.vue";
 import About from "./About.vue";
+import Stack from "./Stack.vue";
 </script>

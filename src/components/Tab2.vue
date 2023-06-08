@@ -4,15 +4,17 @@
     :key="section.tab_2_content_title"
   >
     <h4 class="mt-8">{{ section.tab_2_content_title }}</h4>
-    <div class="imagediv mt-4">
-      <img
-        :src="section.tab_2_content_preview.url"
-        :alt="section.tab_2_content_preview.alt"
-      />
+    <div class="flicker">
+      <div class="imagediv mt-4">
+        <img
+          :src="section.tab_2_content_preview.url"
+          :alt="section.tab_2_content_preview.alt"
+        />
+      </div>
+      <p class="mt-5">
+        {{ section.tab_2_text_area }}
+      </p>
     </div>
-    <p class="mt-5">
-      {{ section.tab_2_text_area }}
-    </p>
   </article>
 </template>
 
