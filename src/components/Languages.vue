@@ -5,7 +5,7 @@
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
-      class="mt-2 grid grid-cols-2 gap-1 rounded-2xl bg-panel2 p-4 xs:grid-cols-3 sm:grid-cols-4 2xl:grid-cols-5"
+      class=":grid-cols-4 mt-2 grid grid-cols-2 gap-1 rounded-2xl bg-panel2 p-4 xs:grid-cols-3 2xl:grid-cols-5"
     >
       <div
         v-for="stackItem in languageItem.acf.stack_repeater"
@@ -17,7 +17,7 @@
           :src="stackItem.stack_image.url"
           :alt="stackItem.stack_image.alt"
         />
-        <p class="text-[0.9rem] text-headingtext 2xl:text-[1rem]">
+        <p class="text-[0.75rem] text-headingtext">
           {{ stackItem.stack_name }}
         </p>
       </div>
