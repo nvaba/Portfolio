@@ -17,7 +17,7 @@
           :src="stackItem.stack_image.url"
           :alt="stackItem.stack_image.alt"
         />
-        <p class="text-[0.75rem] text-headingtext">
+        <p class="text-[0.7rem] text-headingtext">
           {{ stackItem.stack_name }}
         </p>
       </div>

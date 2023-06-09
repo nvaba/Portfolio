@@ -17,7 +17,7 @@
           :src="stackItem.software_image.url"
           :alt="stackItem.software_image.alt"
         />
-        <p class="text-[0.75rem] text-headingtext">
+        <p class="text-[0.7rem] text-headingtext">
           {{ stackItem.software_name }}
         </p>
       </div>
