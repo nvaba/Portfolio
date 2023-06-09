@@ -3,12 +3,12 @@
     <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div
-      class="accordion mt-2 rounded-lg p-4"
+      class="accordion mt-2 rounded-lg p-4 transition-all hover:bg-divhover"
       v-for="item in accordionItems"
       :key="item.id"
     >
       <div
-        class="flex cursor-pointer items-center justify-between transition-transform hover:translate-y-[-0.125rem]"
+        class="hover:translate-y-[-0.125re flex cursor-pointer items-center justify-between transition-transform"
         @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
@@ -88,6 +88,6 @@ const toggleAccordion = (itemId: number) => {
 }
 
 .accordion:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 6px 8px rgba(0, 0, 0, 0.1);
 }
 </style>

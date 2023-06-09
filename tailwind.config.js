@@ -16,6 +16,7 @@ export default {
       navigation: "#303030",
       panel: "#191919",
       panel2: "#1c1c1c",
+      divhover: "#242424",
     },
     screens: {
       xs: "420px",
