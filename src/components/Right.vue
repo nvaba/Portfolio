@@ -1,7 +1,7 @@
 <template>
   <div
     id="right"
-    class="overflow-auto lg:ml-auto lg:w-1/2 lg:border-l lg:border-text lg:px-20 xl:px-32"
+    class="overflow-auto lg:ml-auto lg:w-1/2 lg:border-l lg:border-text lg:px-16 xl:px-32"
   >
     <FeaturedProjects />
     <VisualArts />

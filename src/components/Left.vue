@@ -1,7 +1,7 @@
 <template>
   <div
     id="left"
-    class="fade-in-slide-up h-screen w-full md:px-20 lg:fixed lg:w-1/2 xl:px-32"
+    class="fade-in-slide-up h-screen w-full lg:fixed lg:w-1/2 lg:px-16 xl:px-32"
   >
     <div class="relative mt-20 h-full justify-between lg:flex lg:flex-col">
       <div>

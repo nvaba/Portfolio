@@ -13,7 +13,7 @@
   }
 
   #site-wrapper {
-    @apply relative mx-auto max-w-[125rem] overflow-hidden bg-background px-8 font-Poppins text-text lg:flex lg:px-0;
+    @apply relative mx-auto max-w-[125rem] overflow-hidden bg-background px-8 font-Poppins text-text sm:px-12 md:px-24 lg:flex lg:px-0;
   }
 
   h1,

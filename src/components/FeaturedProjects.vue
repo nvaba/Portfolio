@@ -1,6 +1,6 @@
 <template>
-  <section class="fade-in-slide-up">
-    <h2 id="featured-projects" class="lg:mt-20">Featured Projects</h2>
+  <section class="fade-in-slide-up lg:mt-20">
+    <h2 id="featured-projects">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div
       class="accordion mt-2 rounded-lg p-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover"
