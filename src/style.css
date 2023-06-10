@@ -70,6 +70,15 @@
   max-width: 37.5rem;
 }
 
+.navlistitem {
+  padding: 0.3125rem;
+  border-radius: 100%;
+}
+
+.navlistitem:active {
+  background-color: #242424;
+}
+
 .logosvg:hover path,
 .logosvg:active path {
   fill: white;

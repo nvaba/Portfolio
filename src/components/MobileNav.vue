@@ -1,14 +1,26 @@
 <template>
   <nav
     :class="{ 'show-nav': showNav }"
-    class="fixed bottom-4 left-0 right-0 mx-auto flex w-[90%] max-w-[400px] justify-around rounded-xl bg-navigation px-2 py-3 shadow-lg lg:hidden"
+    class="fixed bottom-4 left-0 right-0 mx-auto w-[90%] max-w-[400px] rounded-xl bg-navigation px-2 py-3 shadow-lg lg:hidden"
   >
-    <a @click.prevent="navigate('#left')"><SVGHome /></a>
-    <a @click.prevent="navigate('#featured-projects')"><SVGProjects /></a>
-    <!-- <a @click.prevent="navigate('#visual-arts')"><SVGArt /></a> -->
-    <a @click.prevent="navigate('#about')"><SVGPerson /></a>
-    <a @click.prevent="navigate('#stack')"><SVGStack /></a>
-    <a @click.prevent="navigate('#mobile-email')"><SVGEmail /></a>
+    <ul class="navlist flex list-none justify-around">
+      <li class="navlistitem list-none">
+        <a @click.prevent="navigate('#left')"><SVGHome /></a>
+      </li>
+      <li class="navlistitem list-none">
+        <a @click.prevent="navigate('#featured-projects')"><SVGProjects /></a>
+      </li>
+      <!-- <li><a @click.prevent="navigate('#visual-arts')"><SVGArt /></a></li> -->
+      <li class="navlistitem list-none">
+        <a @click.prevent="navigate('#about')"><SVGPerson /></a>
+      </li>
+      <li class="navlistitem list-none">
+        <a @click.prevent="navigate('#stack')"><SVGStack /></a>
+      </li>
+      <li class="navlistitem list-none">
+        <a @click.prevent="navigate('#mobile-email')"><SVGEmail /></a>
+      </li>
+    </ul>
   </nav>
 </template>
 
