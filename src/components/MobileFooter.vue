@@ -13,14 +13,28 @@
     </section>
 
     <section class="my-[5rem]">
-      <h4 class="text-center">&#xA9; 2023 | Nate Abaria</h4>
-      <nav></nav>
+      <div class="flex flex-col">
+        <h4 class="text-center">&#xA9; 2023 | Nate Abaria</h4>
+        <nav class="mt-2 flex justify-center gap-2">
+          <a
+            href="https://www.linkedin.com/in/nate-abaria-891b34243/"
+            target="_blank"
+            class="block"
+            ><SVGLinkedin
+          /></a>
+          <a class="block" href="https://github.com/nvaba" target="_blank"
+            ><SVGGithub
+          /></a>
+        </nav>
+      </div>
     </section>
   </footer>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import SVGLinkedin from "./SVGLinkedin.vue";
+import SVGGithub from "./SVGGithub.vue";
 
 let buttonText = ref("Copy Email");
 
