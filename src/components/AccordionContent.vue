@@ -4,10 +4,16 @@
       <h4>{{ item.acf.overview_title }}</h4>
       <p class="projecttext mt-2">{{ item.acf.overview_text }}</p>
       <nav class="mt-3 flex gap-1">
-        <a class="project-external-link" :href="item.acf.live_website_url"
+        <a
+          title="View Live Site"
+          class="project-external-link"
+          :href="item.acf.live_website_url"
           ><SVGWebsite />
         </a>
-        <a class="project-external-link" :href="item.acf.repo_url"
+        <a
+          title="View Github Repository"
+          class="project-external-link"
+          :href="item.acf.repo_url"
           ><SVGGithub />
         </a>
       </nav>
