@@ -88,6 +88,6 @@ const toggleAccordion = (itemId: number) => {
 }
 
 .accordion:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05), 0 6px 8px rgba(0, 0, 0, 0.1);
 }
 </style>
