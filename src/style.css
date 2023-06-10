@@ -73,6 +73,7 @@
 .navlistitem {
   padding: 0.3125rem;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .navlistitem:active {

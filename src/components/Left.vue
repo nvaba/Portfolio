@@ -12,7 +12,7 @@
           and functionality
         </p>
       </div>
-
+      <DesktopNav />
       <DownSVG />
       <DesktopFooter />
     </div>
@@ -22,4 +22,5 @@
 <script setup lang="ts">
 import DownSVG from "./DownSVG.vue";
 import DesktopFooter from "./DesktopFooter.vue";
+import DesktopNav from "./DesktopNav.vue";
 </script>
