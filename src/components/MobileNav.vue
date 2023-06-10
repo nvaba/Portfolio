@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="{ 'show-nav': showNav }"
-    class="fixed bottom-4 left-0 right-0 mx-auto w-[90%] max-w-[400px] rounded-xl bg-navigation px-2 py-3 shadow-lg lg:hidden"
+    class="fixed bottom-4 left-0 right-0 mx-auto w-[90%] max-w-[400px] rounded-xl bg-navigation px-2 py-2 shadow-lg lg:hidden"
   >
     <ul class="navlist flex list-none justify-around">
       <li class="navlistitem list-none">
