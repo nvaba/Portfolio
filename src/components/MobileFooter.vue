@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-[5rem] lg:hidden">
     <section>
-      <h4 class="text-center">Let's Connect!</h4>
+      <h4 id="mobile-email" class="text-center">Let's Connect!</h4>
       <div class="mx-auto mt-2 text-center">
         <button
           @click="copyEmail"

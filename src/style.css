@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    @apply bg-background;
+    @apply scroll-pt-20 bg-background;
   }
 
   body {
@@ -13,7 +13,7 @@
   }
 
   #site-wrapper {
-    @apply relative mx-auto max-w-[125rem] overflow-hidden bg-background px-8 font-Poppins text-text md:px-0 lg:flex;
+    @apply relative mx-auto max-w-[125rem] overflow-hidden bg-background px-8 font-Poppins text-text lg:flex lg:px-0;
   }
 
   h1,
