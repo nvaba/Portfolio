@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-[5rem]">
+  <footer class="mt-[5rem] lg:hidden">
     <section>
       <h4 class="text-center">Let's Connect!</h4>
       <div class="mx-auto mt-2 text-center">
@@ -19,5 +19,3 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style></style>
