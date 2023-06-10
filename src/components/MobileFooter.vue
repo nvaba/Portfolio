@@ -20,9 +20,14 @@
             href="https://www.linkedin.com/in/nate-abaria-891b34243/"
             target="_blank"
             class="block"
+            title="LinkedIn"
             ><SVGLinkedin
           /></a>
-          <a class="block" href="https://github.com/nvaba" target="_blank"
+          <a
+            title="GitHub"
+            class="block"
+            href="https://github.com/nvaba"
+            target="_blank"
             ><SVGGithub
           /></a>
         </nav>
