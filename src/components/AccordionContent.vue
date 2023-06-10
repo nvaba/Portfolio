@@ -8,12 +8,14 @@
           title="View Live Site"
           class="project-external-link"
           :href="item.acf.live_website_url"
+          target="_blank"
           ><SVGWebsite />
         </a>
         <a
           title="View Github Repository"
           class="project-external-link"
           :href="item.acf.repo_url"
+          target="_blank"
           ><SVGGithub />
         </a>
       </nav>
