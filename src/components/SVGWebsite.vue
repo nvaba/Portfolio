@@ -2,7 +2,7 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 256 256"
-    class="logosvg h-8 transition-all hover:translate-y-[-0.125rem] 2xl:h-9 2xl:h-9"
+    class="logosvg h-8 transition-all hover:translate-y-[-0.125rem] 2xl:h-9"
   >
     <path
       fill="#797979"
