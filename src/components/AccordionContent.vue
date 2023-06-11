@@ -1,8 +1,10 @@
 <template>
-  <article class="mt-3 rounded-lg bg-panel p-5">
+  <article class="mt-3 rounded-lg bg-panel p-3">
     <section>
       <h4>{{ item.acf.overview_title }}</h4>
-      <p class="projecttext mt-2">{{ item.acf.overview_text }}</p>
+      <p class="projecttext mt-2 text-headingtext">
+        {{ item.acf.overview_text }}
+      </p>
       <nav class="mt-3 flex gap-1">
         <a
           title="View Live Site"

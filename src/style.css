@@ -124,3 +124,14 @@
     min-height: 100vh;
   }
 }
+
+/* Customize pagination color */
+#mySwiper .swiper-pagination-progressbar-fill {
+  background: #7b8da3; /* Replace with your desired color */
+}
+
+/* Customize arrow color */
+#mySwiper .swiper-button-prev::after,
+#mySwiper .swiper-button-next::after {
+  color: #7b8da3; /* Replace with your desired color */
+}

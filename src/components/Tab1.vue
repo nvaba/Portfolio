@@ -4,12 +4,12 @@
 
     <div class="my-6 text-center">
       <div
-        class="learnlist inline-block text-left"
+        class="learnlist inline-block text-left text-[0.95rem] text-headingtext"
         v-html="props.item.acf.tab_1_content.tab_1_content_list"
       ></div>
     </div>
 
-    <p>
+    <p class="mt-5 text-[0.95rem] text-headingtext">
       {{ props.item.acf.tab_1_content.tab_1_content_text_area }}
     </p>
   </article>
