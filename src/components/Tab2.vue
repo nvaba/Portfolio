@@ -30,7 +30,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles

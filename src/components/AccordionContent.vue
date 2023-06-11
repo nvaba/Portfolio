@@ -63,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps } from "vue";
+import { ref } from "vue";
 import SVGWebsite from "./SVGWebsite.vue";
 import SVGGithub from "./SVGGithub.vue";
 import Tab1 from "./Tab1.vue";
