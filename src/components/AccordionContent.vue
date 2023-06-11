@@ -1,5 +1,5 @@
 <template>
-  <article class="mt-3 rounded-lg bg-panel p-3">
+  <article class="mt-3 rounded-lg bg-panel p-[0.8rem]">
     <section>
       <h4>{{ item.acf.overview_title }}</h4>
       <p class="projecttext mt-2 text-headingtext">
