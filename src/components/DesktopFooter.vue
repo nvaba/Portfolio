@@ -3,7 +3,7 @@
     <section>
       <button
         @click="copyEmail"
-        class="emailButton group relative h-[2.75rem] w-32 overflow-hidden rounded-lg bg-panel2 text-lg transition-all hover:translate-y-[-0.125rem]"
+        class="emailButton group relative h-[2.75rem] w-32 cursor-copy overflow-hidden rounded-lg bg-panel2 text-lg transition-all hover:translate-y-[-0.125rem]"
       >
         <div
           class="absolute inset-0 w-1 bg-accent transition-all duration-[250ms] ease-out group-hover:w-full"
