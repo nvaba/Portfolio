@@ -10,7 +10,7 @@ export default {
     },
     colors: {
       background: "#1E1E1E",
-      text: "#797979",
+      text: "#9D9D9D",
       headingtext: "#DFDFDF",
       accent: "#7B8DA3",
       navigation: "#303030",
