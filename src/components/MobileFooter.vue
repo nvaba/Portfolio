@@ -5,7 +5,7 @@
       <div class="mx-auto mt-2 text-center">
         <button
           @click="copyEmail"
-          class="w-[12.5rem] rounded-xl bg-panel px-8 py-2 text-[0.8rem] text-headingtext transition duration-300 active:bg-accent"
+          class="w-[12.5rem] transform rounded-xl bg-panel px-8 py-2 text-[0.8rem] text-headingtext transition-all duration-300 ease-in-out active:scale-95"
         >
           {{ buttonText }}
         </button>
