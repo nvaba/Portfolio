@@ -13,7 +13,9 @@
         </p>
       </header>
       <DesktopNav />
-      <DownSVG />
+      <a href="#featured-projects">
+        <DownSVG />
+      </a>
       <DesktopFooter />
     </div>
   </div>
