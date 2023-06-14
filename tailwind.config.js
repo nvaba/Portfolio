@@ -16,8 +16,9 @@ export default {
       navigation: "#303030",
       panel: "#191919",
       panel2: "#1c1c1c",
-      divhover: "#242424",
+      divhover: "#2d2d2d",
       bordergray: "#797979",
+      accordion: "#232323",
     },
     screens: {
       xs: "420px",
