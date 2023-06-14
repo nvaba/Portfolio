@@ -17,6 +17,7 @@ export default {
       panel: "#191919",
       panel2: "#1c1c1c",
       divhover: "#242424",
+      bordergray: "#797979",
     },
     screens: {
       xs: "420px",
