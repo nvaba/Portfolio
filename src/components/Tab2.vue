@@ -21,7 +21,7 @@
             :alt="section.tab_2_content_preview.alt"
           />
         </div>
-        <p class="mt-5 text-[0.95rem] text-headingtext">
+        <p class="mt-5 text-[0.95rem] text-text">
           {{ section.tab_2_text_area }}
         </p>
       </article>

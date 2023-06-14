@@ -9,7 +9,7 @@
       ></div>
     </div>
 
-    <p class="mt-5 text-[0.95rem] text-headingtext">
+    <p class="mt-5 text-[0.95rem] text-text">
       {{ props.item.acf.tab_1_content.tab_1_content_text_area }}
     </p>
   </article>
