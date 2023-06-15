@@ -27,20 +27,21 @@
       <div class="mt-7 text-center">
         <div class="mx-auto inline-block rounded-md bg-background p-2">
           <button
-            class="mr-[0.5rem]"
+            class="mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab1'"
             :class="{ active: activeTab === 'tab1' }"
           >
             {{ item.acf.tab_1_category }}
           </button>
           <button
-            class="mr-[0.5rem]"
+            class="mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab2'"
             :class="{ active: activeTab === 'tab2' }"
           >
             {{ item.acf.tab_2_category }}
           </button>
           <button
+            class="text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab3'"
             :class="{ active: activeTab === 'tab3' }"
           >
