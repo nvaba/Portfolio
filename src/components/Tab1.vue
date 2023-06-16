@@ -25,9 +25,7 @@ interface AccordionContentProps {
         tab_1_content_list: string;
         tab_1_content_text_area: string;
       };
-      // Add more properties as needed
     };
-    // Add more properties as needed
   };
 }
 
