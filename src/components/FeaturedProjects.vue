@@ -8,7 +8,7 @@
       :key="item.id"
     >
       <div
-        class="hover:translate-y-[-0.125re flex cursor-pointer items-center justify-between transition-transform"
+        class="flex cursor-pointer items-center justify-between transition-transform"
         @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
