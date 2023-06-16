@@ -6,10 +6,10 @@
       class="accordion mt-2 rounded-lg bg-accordion p-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover"
       v-for="item in accordionItems"
       :key="item.id"
+      @click="toggleAccordion(item.id)"
     >
       <div
         class="flex cursor-pointer items-center justify-between transition-transform"
-        @click="toggleAccordion(item.id)"
       >
         <h3>{{ item.title.rendered }}</h3>
         <SvgArrow :active="activeAccordionItem === item.id" />
@@ -33,6 +33,15 @@ interface AccordionItem {
   id: number;
   title: {
     rendered: string;
+  };
+  acf: {
+    overview_title: string;
+    overview_text: string;
+    live_website_url: string;
+    repo_url: string;
+    tab_1_category: string;
+    tab_2_category: string;
+    tab_3_category: string;
   };
   // Add more properties as needed
 }
