@@ -12,7 +12,6 @@
         <SVGRight
           class="lg:transition-transform lg:duration-200 lg:group-hover:translate-x-[0.25rem]"
         />
-        <!-- Translate the SVGRight component on hover -->
       </span>
     </a>
   </section>
