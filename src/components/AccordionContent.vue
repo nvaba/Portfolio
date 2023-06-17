@@ -24,24 +24,27 @@
     </section>
 
     <section>
-      <div class="mt-7 text-center">
+      <div class="relative mt-7 text-center">
         <div class="mx-auto inline-block rounded-md bg-background p-2">
           <button
-            class="mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
+            ref="tabs"
+            class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab1'"
             :class="{ active: activeTab === 'tab1' }"
           >
             {{ props.item.acf.tab_1_category }}
           </button>
           <button
-            class="mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
+            ref="tabs"
+            class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab2'"
             :class="{ active: activeTab === 'tab2' }"
           >
             {{ props.item.acf.tab_2_category }}
           </button>
           <button
-            class="text-[0.85rem] lg:text-[0.9rem]"
+            ref="tabs"
+            class="tab text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab3'"
             :class="{ active: activeTab === 'tab3' }"
           >
@@ -64,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, Ref, onMounted, onUpdated } from "vue";
 import SVGWebsite from "./SVGWebsite.vue";
 import SVGGithub from "./SVGGithub.vue";
 import Tab1 from "./Tab1.vue";
@@ -116,13 +119,41 @@ const props = defineProps<AccordionContentProps>();
 // Define the activeTab ref
 const activeTab = ref("tab1");
 
-// Output the received data
-// console.log(props.item.acf.live_website_url);
+const tabs: Ref<Element[] | null> = ref(null);
+
+onMounted(() => {
+  tabs.value = Array.from(document.querySelectorAll(".tab"));
+});
+
+onUpdated(() => {
+  tabs.value = Array.from(document.querySelectorAll(".tab"));
+});
 </script>
 
 <style scoped>
-.active {
+.tab {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #dfdfdf;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tab.active {
   color: #dfdfdf;
-  text-decoration: underline;
+}
+
+.tab.active::after {
+  transform: scaleX(1);
 }
 </style>
