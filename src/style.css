@@ -41,7 +41,7 @@
 
   p,
   ul {
-    @apply max-w-prose text-[1rem] xl:text-[1.1rem];
+    @apply max-w-prose text-[1.05rem];
   }
 
   ul,
