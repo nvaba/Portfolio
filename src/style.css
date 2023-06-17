@@ -24,7 +24,7 @@
   }
 
   h1 {
-    @apply text-[1.9rem] xl:text-[2.5rem];
+    @apply text-[1.9rem] xl:text-[2.75rem];
   }
 
   h2 {
@@ -41,7 +41,7 @@
 
   p,
   ul {
-    @apply max-w-prose text-[1.05rem];
+    @apply max-w-prose text-[1rem];
   }
 
   ul,

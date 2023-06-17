@@ -1,19 +1,34 @@
 <template>
   <section class="fade-in-slide-up mt-[5rem]">
     <h2 id="visual-arts">Visual Arts</h2>
-    <p class="mt-2">A collection of my work outside of web development.</p>
-    <a
-      target="_blank"
-      class="group mt-3 inline-block text-accent active:text-headingtext lg:transition-colors lg:duration-100 lg:ease-in-out lg:hover:text-headingtext"
-      href="https://nateabaria.ca/gallery/"
+    <div
+      class="group mt-2 rounded-lg bg-accordion p-3 shadow-md lg:hover:bg-divhover"
     >
-      <span class="flex items-center gap-1">
-        View Gallery
-        <SVGRight
-          class="lg:transition-transform lg:duration-200 lg:group-hover:translate-x-[0.25rem]"
-        />
-      </span>
-    </a>
+      <p>A collection of my work outside of web development.</p>
+
+      <a target="_blank" href="https://nateabaria.ca/gallery/">
+        <div class="mt-2 overflow-hidden rounded-md">
+          <img
+            class="h-80 w-full transform rounded-md object-cover object-top transition-all duration-200 ease-in-out hover:scale-105 hover:blur-0 hover:brightness-100 lg:scale-100 lg:blur-[1px] lg:brightness-[0.3]"
+            src="/buildings.webp"
+            alt="Visual Arts Banner"
+          />
+        </div>
+      </a>
+
+      <a
+        target="_blank"
+        class="group mt-2 inline-block text-accent active:text-headingtext lg:transition-colors lg:duration-100 lg:ease-in-out lg:group-hover:text-headingtext"
+        href="https://nateabaria.ca/gallery/"
+      >
+        <span class="flex items-center gap-1">
+          View Gallery
+          <SVGRight
+            class="lg:transition-transform lg:duration-200 lg:group-hover:translate-x-[0.25rem]"
+          />
+        </span>
+      </a>
+    </div>
   </section>
 </template>
 
