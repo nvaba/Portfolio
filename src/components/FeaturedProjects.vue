@@ -3,7 +3,7 @@
     <h2 id="featured-projects">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div
-      class="accordion mt-2 rounded-lg bg-accordion p-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover"
+      class="accordion mt-2 rounded-lg bg-accordion px-2 py-3 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:p-4"
       v-for="item in accordionItems"
       :key="item.id"
     >
