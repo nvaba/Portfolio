@@ -68,6 +68,14 @@ html {
   color: #7b8da3;
 }
 
+.project-external-link path {
+  fill: #7b8da3;
+}
+
+.project-external-link svg {
+  height: 1.9rem;
+}
+
 .imagediv {
   margin-inline: auto;
   max-height: 21.875rem;
