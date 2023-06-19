@@ -9,7 +9,7 @@
       <a target="_blank" href="https://nateabaria.ca/gallery/">
         <div class="mt-2 overflow-hidden rounded-md">
           <img
-            class="h-40 w-full transform rounded-md object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:blur-0 hover:brightness-100 sm:h-60 md:h-80 lg:h-16 lg:scale-100 lg:blur-[1px] lg:brightness-[0.2] lg:group-hover:h-80"
+            class="h-40 w-full transform rounded-md object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:blur-0 hover:brightness-100 sm:h-60 md:h-80 lg:blur-[1px] lg:brightness-[0.4] lg:group-hover:h-80"
             src="/buildings.webp"
             alt="Visual Arts Banner"
           />
