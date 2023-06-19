@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul
-      class="hidden flex-col gap-5 rounded-xl bg-navigation px-[0.4rem] py-4 shadow-lg lg:inline-flex"
+      class="hidden flex-col gap-5 rounded-xl bg-navigation px-[0.4rem] py-3 shadow-lg lg:inline-flex"
     >
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
