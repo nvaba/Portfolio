@@ -3,7 +3,7 @@
     <h2 id="featured-projects">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div
-      class="accordion mt-2 rounded-lg bg-accordion px-2 py-3 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:p-4"
+      class="accordion group mt-2 rounded-lg bg-accordion px-2 py-3 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:p-4"
       v-for="item in accordionItems"
       :key="item.id"
     >
@@ -14,6 +14,27 @@
         <h3>{{ item.title.rendered }}</h3>
         <SvgArrow :active="activeAccordionItem === item.id" />
       </div>
+      <transition
+        name="fade"
+        enter-active-class="transition-opacity duration-300"
+        leave-active-class="transition-opacity duration-0"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          class="mt-1 hidden overflow-hidden rounded-md lg:block"
+          v-if="activeAccordionItem !== item.id"
+        >
+          <img
+            class="h-32 w-full rounded-md object-cover brightness-[0.5] transition-all group-hover:scale-105 group-hover:brightness-75"
+            @click="toggleAccordion(item.id)"
+            :src="item.acf.mockup_image.url"
+            :alt="item.acf.mockup_image.alt"
+          />
+        </div>
+      </transition>
       <transition name="accordion">
         <div v-show="activeAccordionItem === item.id" class="mt-2">
           <AccordionContent :item="item" />
@@ -37,6 +58,10 @@ interface AccordionItem {
   acf: {
     overview_title: string;
     overview_text: string;
+    mockup_image: {
+      url: string;
+      alt: string;
+    };
     live_website_url: string;
     repo_url: string;
     tab_1_category: string;
@@ -74,6 +99,7 @@ onMounted(async () => {
       "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects?acf_format=standard"
     );
     accordionItems.value = response.data; // Assuming the API response is an array of accordion items
+    console.log("Accordion items:", accordionItems.value);
   } catch (error) {
     console.error("Failed to fetch accordion items:", error);
   }
@@ -119,4 +145,17 @@ const toggleAccordion = (itemId: number) => {
 .accordion:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05), 0 6px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* .fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-leave-active {
+  transition: opacity 0s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+} */
 </style>
