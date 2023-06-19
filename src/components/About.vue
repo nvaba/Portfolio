@@ -1,11 +1,18 @@
 <template>
-  <section class="fade-in-slide-up">
+  <section class="fade-in-slide-up" v-if="aboutContent.length > 0">
     <h2 id="about" class="mt-[5rem]">About</h2>
-    <article
-      class="about-list mt-2"
-      v-if="aboutContent.length"
-      v-html="aboutContent[0].acf.about_list"
-    ></article>
+    <article class="border-l-2 border-accent pl-5">
+      <ul class="about-list mt-2">
+        <li
+          v-for="item in aboutContent[0].acf.about_repeater"
+          :key="item.about_heading"
+          class="mb-5"
+        >
+          <h4 class="text-headingtext">{{ item.about_heading }}</h4>
+          <p>{{ item.about_text_area }}</p>
+        </li>
+      </ul>
+    </article>
   </section>
 </template>
 
@@ -16,7 +23,10 @@ import axios from "axios";
 interface AboutItem {
   id: number;
   acf: {
-    about_list: string;
+    about_repeater: {
+      about_heading: string;
+      about_text_area: string;
+    }[];
   };
 }
 
@@ -29,7 +39,7 @@ onMounted(async () => {
     );
     aboutContent.value = response.data;
 
-    // console.log(aboutContent.value[0].acf.about_list);
+    console.log(aboutContent.value[0].acf.about_repeater);
   } catch (error) {
     console.error("Failed to fetch about items:", error);
   }
@@ -38,6 +48,6 @@ onMounted(async () => {
 
 <style>
 .about-list li {
-  margin-bottom: 0.4rem;
+  list-style-type: none;
 }
 </style>
