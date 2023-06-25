@@ -34,7 +34,7 @@
 .cursor svg {
   display: block;
   fill: none;
-  stroke: #dfdfdf;
+  stroke: rgba(223, 223, 223, 0.5);
   stroke-width: 1;
   stroke-miterlimit: miter;
 }

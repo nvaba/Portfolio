@@ -1,6 +1,7 @@
 <template>
   <Swiper
-    :slidesPerView="1.055"
+    :slidesPerView="1.052"
+    :navigation="true"
     :spaceBetween="10"
     :pagination="{
       type: 'progressbar',
@@ -19,9 +20,10 @@
           <img
             :src="section.tab_2_content_preview.url"
             :alt="section.tab_2_content_preview.alt"
+            class="h-full max-h-[338px] w-full flex-shrink-0 flex-grow-0 object-fill"
           />
         </div>
-        <p class="mt-5 text-[0.95rem] text-text">
+        <p class="mt-5 flex-grow-0 text-[0.95rem] text-text">
           {{ section.tab_2_text_area }}
         </p>
       </article>
@@ -67,3 +69,26 @@ interface AccordionContentProps {
   };
 }
 </script>
+
+<style>
+.swiper-button-next,
+.swiper-button-prev {
+  top: 8.6%;
+  color: #7b8da3;
+  left: auto;
+  right: 4%;
+  scale: 40%;
+  display: none;
+}
+
+.swiper-button-prev {
+  right: 8.5%;
+}
+
+@media (min-width: 1024px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+</style>
