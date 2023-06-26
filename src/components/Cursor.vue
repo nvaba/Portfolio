@@ -13,7 +13,7 @@
 <style>
 .cursor {
   box-sizing: border-box;
-  width: 40px;
+  width: 30px;
   position: fixed;
   top: 0;
   left: 0;
