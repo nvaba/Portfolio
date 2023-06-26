@@ -156,4 +156,8 @@ onUpdated(() => {
 .tab.active::after {
   transform: scaleX(1);
 }
+
+/* .swiper, .swiper-container {
+  position: static;
+} */
 </style>
