@@ -1,10 +1,13 @@
 <template>
   <Swiper
-    :slidesPerView="1.052"
-    :spaceBetween="10"
     :pagination="{
       type: 'progressbar',
     }"
+    :navigation="{
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }"
+    :loop="true"
     :modules="modules"
     class="tab3-swiper mt-2"
     id="mySwiper"
@@ -20,6 +23,10 @@
         </p>
       </article>
     </SwiperSlide>
+    <div class="mt-2 flex justify-between">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </Swiper>
 </template>
 
@@ -56,37 +63,4 @@ interface AccordionContentProps {
     // Add more properties as needed
   };
 }
-
-// const swiperBreakpoints = {
-//   // when window width is >= 320px
-//   320: {
-//     slidesPerView: 1.052,
-//   },
-//   1024: {
-//     slidesPerView: 1,
-//   },
-// };
 </script>
-
-<style>
-/* .tab3-swiper .swiper-button-next,
-.tab3-swiper .swiper-button-prev {
-  top: 23%;
-  color: #7b8da3;
-  left: auto;
-  right: 0.2%;
-  scale: 50%;
-  display: none;
-}
-
-.tab3-swiper .swiper-button-prev {
-  right: calc(0.2% + 25px);
-}
-
-@media (min-width: 1024px) {
-  .tab3-swiper .swiper-button-next,
-  .tab3-swiper .swiper-button-prev {
-    display: block;
-  }
-} */
-</style>
