@@ -1,11 +1,14 @@
 <template>
   <Swiper
-    :navigation="false"
-    :slidesPerView="1.052"
-    :spaceBetween="10"
     :pagination="{
       type: 'progressbar',
     }"
+    :navigation="{
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }"
+    :spaceBetween="5"
+    :loop="true"
     :modules="modules"
     class="tab2-swiper mt-2"
     id="mySwiper"
@@ -28,6 +31,10 @@
         </p>
       </article>
     </SwiperSlide>
+    <div class="mt-2 flex justify-between">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </Swiper>
 </template>
 
@@ -63,42 +70,17 @@ interface AccordionContentProps {
         };
         tab_2_text_area: string;
       }[];
-      // Add more properties as needed
     };
-    // Add more properties as needed
   };
 }
-
-// const swiperBreakpoints = {
-//   // when window width is >= 320px
-//   320: {
-//     slidesPerView: 1.052,
-//   },
-//   1024: {
-//     slidesPerView: 1,
-//   },
-// };
 </script>
 
 <style>
-/* .tab2-swiper .swiper-button-next,
-.tab2-swiper .swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-next {
   position: static;
-  color: #7b8da3;
-  left: auto;
-  right: 0.2%;
+  margin: 0;
   scale: 50%;
-  display: none;
+  color: #7b8da3;
 }
-
-.tab2-swiper .swiper-button-prev {
-  right: calc(0.2% + 25px);
-}
-
-@media (min-width: 1024px) {
-  .tab2-swiper .swiper-button-next,
-  .tab2-swiper .swiper-button-prev {
-    display: block;
-  }
-} */
 </style>
