@@ -18,7 +18,7 @@
     <section>
       <nav class="flex gap-2">
         <a
-          href="https://www.linkedin.com/in/nate-abaria-891b34243/"
+          href="https://www.linkedin.com/in/nate-abaria/"
           target="_blank"
           class="block"
           title="LinkedIn"
