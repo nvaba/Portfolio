@@ -8,7 +8,7 @@
     >
       <header>
         <h1>Nate Abaria</h1>
-        <p>Web Developer and Designer</p>
+        <p>Front-End Developer and Designer</p>
         <p class="mt-[14rem] lg:mt-10 lg:text-[1rem]">
           Specializing in simplicity <br />
           and functionality
