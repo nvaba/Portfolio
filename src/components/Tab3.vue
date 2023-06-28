@@ -23,7 +23,7 @@
         </p>
       </article>
     </SwiperSlide>
-    <div class="mt-2 flex justify-between">
+    <div class="mt-3 flex justify-between">
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
