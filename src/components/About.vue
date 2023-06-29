@@ -1,8 +1,8 @@
 <template>
   <section class="fade-in-slide-up" v-if="aboutContent.length > 0">
     <h2 id="about" class="mt-[5rem]">About</h2>
-    <article class="border-l-2 border-accent pl-5">
-      <ul class="about-list mt-2">
+    <article>
+      <ul class="about-list mt-2 rounded-md bg-accordion p-4 shadow-lg">
         <li
           v-for="item in aboutContent[0].acf.about_repeater"
           :key="item.about_heading"
