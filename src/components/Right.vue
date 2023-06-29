@@ -8,6 +8,7 @@
     <About />
     <Stack />
     <MobileFooter />
+    <PlanToLearn />
   </div>
 </template>
 
@@ -17,4 +18,5 @@ import VisualArts from "./VisualArts.vue";
 import About from "./About.vue";
 import Stack from "./Stack.vue";
 import MobileFooter from "./MobileFooter.vue";
+import PlanToLearn from "./PlanToLearn.vue";
 </script>
