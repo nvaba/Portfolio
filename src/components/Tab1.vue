@@ -4,7 +4,7 @@
 
     <div class="my-6 text-center">
       <div
-        class="learnlist inline-block text-left text-[0.95rem] text-headingtext"
+        class="learnlist inline-block max-w-[80%] text-left text-[0.95rem] text-headingtext"
         v-html="props.item.acf.tab_1_content.tab_1_content_list"
       ></div>
     </div>
@@ -33,3 +33,9 @@ interface AccordionContentProps {
 const props = defineProps<AccordionContentProps>();
 // console.log(props.item.acf.tab_1_content.tab_1_content_list);
 </script>
+
+<style>
+.learnlist li {
+  margin-bottom: 0.3rem;
+}
+</style>
