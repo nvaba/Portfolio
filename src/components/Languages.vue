@@ -1,20 +1,20 @@
 <template>
-  <article class="my-2">
-    <h3>Developer Stack</h3>
+  <article class="my-2 rounded-lg bg-accordion py-2 shadow-lg sm:py-4">
+    <h3 class="px-2 sm:px-4">Developer Stack</h3>
 
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
-      class="mt-2 grid grid-cols-2 gap-1 rounded-lg bg-accordion p-4"
+      class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-2 sm:px-4"
     >
-      <article
+      <div
         v-for="stackItem in languageItem.acf.stack_repeater"
         :key="stackItem.stack_name"
         class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
       >
         <div>
           <img
-            class="block max-h-[30px] max-w-[30px] rounded-xl xs:max-h-[40px] xs:max-w-[40px] xl:max-h-[50px] xl:max-w-[50px] 2xl:max-h-[60px] 2xl:max-w-[60px]"
+            class="block max-h-[30px] max-w-[30px] rounded-xl xs:max-h-[40px] xs:max-w-[40px] xl:max-h-[50px] xl:max-w-[50px]"
             :src="stackItem.stack_image.url"
             :alt="stackItem.stack_image.alt"
           />
@@ -27,7 +27,7 @@
             {{ stackItem.stack_desc }}
           </p>
         </div>
-      </article>
+      </div>
     </div>
   </article>
 </template>

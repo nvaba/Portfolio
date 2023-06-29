@@ -1,25 +1,32 @@
 <template>
-  <article class="my-7">
-    <h3>Software and Programs</h3>
+  <article class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4">
+    <h3 class="px-4">Software and Programs</h3>
 
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.software_and_programs_repeater[0].software_name"
-      class="mt-2 grid grid-cols-2 gap-1 rounded-2xl bg-panel2 p-4 xs:grid-cols-3 sm:grid-cols-4 2xl:grid-cols-5"
+      class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
     >
       <div
         v-for="stackItem in languageItem.acf.software_and_programs_repeater"
         :key="stackItem.software_name"
-        class="flex flex-col items-center overflow-hidden transition-transform hover:translate-y-[-0.125rem]"
+        class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
       >
-        <img
-          class="block max-h-[40px] max-w-[40px] rounded-xl"
-          :src="stackItem.software_image.url"
-          :alt="stackItem.software_image.alt"
-        />
-        <p class="text-[0.7rem] text-text">
-          {{ stackItem.software_name }}
-        </p>
+        <div>
+          <img
+            class="block max-h-[30px] max-w-[30px] rounded-xl xs:max-h-[40px] xs:max-w-[40px] xl:max-h-[50px] xl:max-w-[50px]"
+            :src="stackItem.software_image.url"
+            :alt="stackItem.software_image.alt"
+          />
+        </div>
+        <div class="flex flex-col">
+          <h4 class="text-[0.8rem] sm:text-base">
+            {{ stackItem.software_name }}
+          </h4>
+          <p class="text-[0.6rem] text-text xs:text-[0.7rem] sm:text-[0.8rem]">
+            {{ stackItem.software_desc }}
+          </p>
+        </div>
       </div>
     </div>
   </article>
@@ -33,6 +40,7 @@ interface LanguageItem {
   acf: {
     software_and_programs_repeater: {
       software_name: string;
+      software_desc: string;
       software_image: {
         url: string;
         alt: string;

@@ -2,7 +2,7 @@
   <section class="fade-in-slide-up mt-[5rem]">
     <h2 id="visual-arts">Visual Arts</h2>
     <div
-      class="group mt-2 rounded-lg bg-accordion p-3 shadow-md lg:hover:bg-divhover"
+      class="group mt-2 rounded-lg bg-accordion px-2 py-4 shadow-md sm:px-4 lg:hover:bg-divhover"
     >
       <p>A collection of my work outside of web development.</p>
 
