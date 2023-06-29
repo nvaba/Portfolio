@@ -5,22 +5,29 @@
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
-      class=":grid-cols-4 mt-2 grid grid-cols-2 gap-1 rounded-2xl bg-panel2 p-4 xs:grid-cols-3 2xl:grid-cols-5"
+      class="mt-2 grid grid-cols-2 gap-1 rounded-lg bg-accordion p-4"
     >
-      <div
+      <article
         v-for="stackItem in languageItem.acf.stack_repeater"
         :key="stackItem.stack_name"
-        class="flex flex-col items-center overflow-hidden transition-transform hover:translate-y-[-0.125rem]"
+        class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
       >
-        <img
-          class="block max-h-[40px] max-w-[40px] rounded-xl"
-          :src="stackItem.stack_image.url"
-          :alt="stackItem.stack_image.alt"
-        />
-        <p class="text-[0.7rem] text-text">
-          {{ stackItem.stack_name }}
-        </p>
-      </div>
+        <div>
+          <img
+            class="block max-h-[30px] max-w-[30px] rounded-xl xs:max-h-[40px] xs:max-w-[40px] xl:max-h-[50px] xl:max-w-[50px] 2xl:max-h-[60px] 2xl:max-w-[60px]"
+            :src="stackItem.stack_image.url"
+            :alt="stackItem.stack_image.alt"
+          />
+        </div>
+        <div class="flex flex-col">
+          <h4 class="text-[0.8rem] sm:text-base">
+            {{ stackItem.stack_name }}
+          </h4>
+          <p class="text-[0.6rem] text-text xs:text-[0.7rem] sm:text-[0.8rem]">
+            {{ stackItem.stack_desc }}
+          </p>
+        </div>
+      </article>
     </div>
   </article>
 </template>
@@ -33,6 +40,7 @@ interface LanguageItem {
   acf: {
     stack_repeater: {
       stack_name: string;
+      stack_desc: string;
       stack_image: {
         url: string;
         alt: string;
