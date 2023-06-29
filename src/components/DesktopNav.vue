@@ -6,17 +6,19 @@
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
       >
-        <a @click.prevent="navigate('#featured-projects')"><SVGProjects /></a>
+        <a @click.prevent="navigate('#featured-projects')"
+          ><SVGProjects class="h-6"
+        /></a>
       </li>
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
       >
-        <a @click.prevent="navigate('#about')"><SVGPerson /></a>
+        <a @click.prevent="navigate('#about')"><SVGPerson class="h-6" /></a>
       </li>
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
       >
-        <a @click.prevent="navigate('#stack')"><SVGStack /></a>
+        <a @click.prevent="navigate('#stack')"><SVGStack class="h-6" /></a>
       </li>
     </ul>
   </nav>
