@@ -1,9 +1,9 @@
 <template>
-  <section class="fade-in-slide-up" v-if="aboutContent.length > 0">
+  <section class="fade-in-slide-up shadow-lg" v-if="aboutContent.length > 0">
     <h2 id="about" class="mt-[5rem]">About</h2>
     <article class="rounded-lg bg-accordion">
       <ul
-        class="about-list mt-2 flex flex-col gap-4 rounded-lg px-2 py-4 shadow-lg sm:px-4"
+        class="about-list mt-2 flex flex-col gap-4 rounded-lg px-2 py-4 sm:px-4"
       >
         <li
           v-for="item in aboutContent[0].acf.about_repeater"
