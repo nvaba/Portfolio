@@ -15,7 +15,7 @@
         </p>
       </header>
       <DesktopNav />
-      <a href="#featured-projects">
+      <a class="lg:hidden" href="#featured-projects">
         <DownSVG />
       </a>
       <DesktopFooter />
