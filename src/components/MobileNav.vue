@@ -9,7 +9,7 @@
       <li class="navlistitem list-none" role="presentation">
         <a
           @click.prevent="navigate('#left')"
-          role="link"
+          role="button"
           aria-label="Navigate to Home section"
           ><SVGHome
         /></a>
@@ -17,7 +17,7 @@
       <li class="navlistitem list-none" role="presentation">
         <a
           @click.prevent="navigate('#featured-projects')"
-          role="link"
+          role="button"
           aria-label="Navigate to Featured Projects section"
           ><SVGProjects
         /></a>
@@ -26,7 +26,7 @@
       <li class="navlistitem list-none" role="presentation">
         <a
           @click.prevent="navigate('#about')"
-          role="link"
+          role="button"
           aria-label="Navigate to About section"
           ><SVGPerson
         /></a>
@@ -34,7 +34,7 @@
       <li class="navlistitem list-none" role="presentation">
         <a
           @click.prevent="navigate('#stack')"
-          role="link"
+          role="button"
           aria-label="Navigate to Stack section"
           ><SVGStack
         /></a>

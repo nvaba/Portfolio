@@ -10,6 +10,7 @@
         <a
           @click.prevent="navigate('#featured-projects')"
           aria-label="Navigate to Featured Projects section"
+          role="button"
         >
           <SVGProjects class="h-6" />
         </a>
@@ -21,6 +22,7 @@
         <a
           @click.prevent="navigate('#about')"
           aria-label="Navigate to About section"
+          role="button"
         >
           <SVGPerson class="h-6" />
         </a>
@@ -32,6 +34,7 @@
         <a
           @click.prevent="navigate('#stack')"
           aria-label="Navigate to Stack section"
+          role="button"
         >
           <SVGStack class="h-6" />
         </a>
