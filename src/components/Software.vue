@@ -11,6 +11,7 @@
         v-for="stackItem in languageItem.acf.software_and_programs_repeater"
         :key="stackItem.software_name"
         class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
+        aria-label="Software and program items"
       >
         <div>
           <img

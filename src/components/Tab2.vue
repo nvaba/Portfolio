@@ -12,10 +12,14 @@
     :modules="modules"
     class="tab2-swiper mt-2"
     id="mySwiper"
+    role="region"
+    aria-label="Tab 2 Content"
   >
     <SwiperSlide
       v-for="section in item.acf.tab_2_repeater_content"
       :key="section.tab_2_content_title"
+      role="article"
+      aria-label="Tab 2 Slide"
     >
       <article>
         <h4 class="mt-8">{{ section.tab_2_content_title }}</h4>
@@ -26,14 +30,26 @@
             class="h-full max-h-[338px] w-full flex-shrink-0 flex-grow-0 object-fill"
           />
         </div>
-        <p class="mt-5 flex-grow-0 text-[0.95rem] text-text">
+        <p
+          class="mt-5 flex-grow-0 text-[0.95rem] text-text"
+          role="textbox"
+          aria-label="Tab 2 Text Area"
+        >
           {{ section.tab_2_text_area }}
         </p>
       </article>
     </SwiperSlide>
     <div class="mt-3 flex justify-between">
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div
+        class="swiper-button-prev"
+        role="button"
+        aria-label="Previous Slide"
+      ></div>
+      <div
+        class="swiper-button-next"
+        role="button"
+        aria-label="Next Slide"
+      ></div>
     </div>
   </Swiper>
 </template>

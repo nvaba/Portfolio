@@ -2,23 +2,50 @@
   <nav
     :class="{ 'show-nav': showNav }"
     class="fixed bottom-4 left-0 right-0 mx-auto w-[90%] max-w-[400px] rounded-xl bg-navigation px-2 py-2 shadow-lg lg:hidden"
+    role="navigation"
+    aria-label="Mobile Navigation"
   >
     <ul class="navlist flex list-none justify-around">
-      <li class="navlistitem list-none">
-        <a @click.prevent="navigate('#left')"><SVGHome /></a>
+      <li class="navlistitem list-none" role="presentation">
+        <a
+          @click.prevent="navigate('#left')"
+          role="link"
+          aria-label="Navigate to Home section"
+          ><SVGHome
+        /></a>
       </li>
-      <li class="navlistitem list-none">
-        <a @click.prevent="navigate('#featured-projects')"><SVGProjects /></a>
+      <li class="navlistitem list-none" role="presentation">
+        <a
+          @click.prevent="navigate('#featured-projects')"
+          role="link"
+          aria-label="Navigate to Featured Projects section"
+          ><SVGProjects
+        /></a>
       </li>
       <!-- <li><a @click.prevent="navigate('#visual-arts')"><SVGArt /></a></li> -->
-      <li class="navlistitem list-none">
-        <a @click.prevent="navigate('#about')"><SVGPerson /></a>
+      <li class="navlistitem list-none" role="presentation">
+        <a
+          @click.prevent="navigate('#about')"
+          role="link"
+          aria-label="Navigate to About section"
+          ><SVGPerson
+        /></a>
       </li>
-      <li class="navlistitem list-none">
-        <a @click.prevent="navigate('#stack')"><SVGStack /></a>
+      <li class="navlistitem list-none" role="presentation">
+        <a
+          @click.prevent="navigate('#stack')"
+          role="link"
+          aria-label="Navigate to Stack section"
+          ><SVGStack
+        /></a>
       </li>
-      <li class="navlistitem list-none">
-        <a @click.prevent="navigate('#mobile-email')"><SVGEmail /></a>
+      <li class="navlistitem list-none" role="presentation">
+        <a
+          @click.prevent="navigate('#mobile-email')"
+          role="link"
+          aria-label="Navigate to Contact section"
+          ><SVGEmail
+        /></a>
       </li>
     </ul>
   </nav>

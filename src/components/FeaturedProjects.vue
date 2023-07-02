@@ -6,10 +6,15 @@
       class="accordion group mt-2 rounded-lg bg-accordion px-2 py-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:px-4"
       v-for="item in accordionItems"
       :key="item.id"
+      role="region"
+      :aria-labelledby="'accordion-heading-' + item.id"
     >
       <div
         class="flex cursor-pointer items-center justify-between transition-transform"
         @click="toggleAccordion(item.id)"
+        :id="'accordion-heading-' + item.id"
+        role="button"
+        :aria-expanded="activeAccordionItem === item.id"
       >
         <h3>{{ item.title.rendered }}</h3>
         <SvgArrow :active="activeAccordionItem === item.id" />
@@ -43,7 +48,6 @@
     </div>
   </section>
 </template>
-
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import axios from "axios";

@@ -11,6 +11,8 @@
           class="project-external-link"
           :href="props.item.acf.live_website_url"
           target="_blank"
+          aria-label="View Live Site"
+          rel="noopener"
           ><SVGWebsite />
         </a>
         <a
@@ -18,6 +20,8 @@
           class="project-external-link"
           :href="props.item.acf.repo_url"
           target="_blank"
+          aria-label="View Github Repository"
+          rel="noopener"
           ><SVGGithub />
         </a>
       </nav>
@@ -27,39 +31,55 @@
       <div class="relative mt-7 text-center">
         <div class="mx-auto inline-block rounded-md bg-background p-2">
           <button
+            aria-controls="tab1-content"
             ref="tabs"
             class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab1'"
             :class="{ active: activeTab === 'tab1' }"
+            aria-selected="true"
+            role="tab"
+            id="tab1"
           >
             {{ props.item.acf.tab_1_category }}
           </button>
           <button
+            aria-controls="tab2-content"
             ref="tabs"
             class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab2'"
             :class="{ active: activeTab === 'tab2' }"
+            aria-selected="false"
+            role="tab"
+            id="tab2"
           >
             {{ props.item.acf.tab_2_category }}
           </button>
           <button
+            aria-controls="tab3-content"
             ref="tabs"
             class="tab text-[0.85rem] lg:text-[0.9rem]"
             @click="activeTab = 'tab3'"
             :class="{ active: activeTab === 'tab3' }"
+            aria-selected="false"
+            role="tab"
+            id="tab3"
           >
             {{ props.item.acf.tab_3_category }}
           </button>
         </div>
       </div>
 
-      <div v-if="activeTab === 'tab1' && props.item.acf.tab_1_content">
+      <div
+        v-if="activeTab === 'tab1' && props.item.acf.tab_1_content"
+        aria-labelledby="tab1"
+        role="tabpanel"
+      >
         <Tab1 :item="props.item" />
       </div>
-      <div v-if="activeTab === 'tab2'">
+      <div v-if="activeTab === 'tab2'" aria-labelledby="tab2" role="tabpanel">
         <Tab2 :item="props.item" />
       </div>
-      <div v-if="activeTab === 'tab3'">
+      <div v-if="activeTab === 'tab3'" aria-labelledby="tab3" role="tabpanel">
         <Tab3 :item="props.item" />
       </div>
     </section>

@@ -4,9 +4,11 @@
       <button
         @click="copyEmail"
         class="emailButton group relative h-[2.75rem] w-32 cursor-copy overflow-hidden rounded-lg bg-panel2 text-lg transition-all hover:translate-y-[-0.125rem]"
+        aria-label="Copy email address to clipboard"
       >
         <div
           class="absolute inset-0 w-1 bg-accent transition-all duration-[250ms] ease-out group-hover:w-full"
+          role="presentation"
         ></div>
         <span
           class="relative text-[0.9rem] text-headingtext group-hover:text-panel"
@@ -22,6 +24,8 @@
           target="_blank"
           class="block"
           title="LinkedIn"
+          aria-label="LinkedIn profile"
+          rel="noopener"
           ><SVGLinkedin
         /></a>
         <a
@@ -29,6 +33,8 @@
           class="block"
           href="https://github.com/nvaba"
           target="_blank"
+          aria-label="GitHub profile"
+          rel="noopener"
           ><SVGGithub
         /></a>
       </nav>

@@ -5,20 +5,36 @@
     >
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
+        role="presentation"
       >
-        <a @click.prevent="navigate('#featured-projects')"
-          ><SVGProjects class="h-6"
-        /></a>
+        <a
+          @click.prevent="navigate('#featured-projects')"
+          aria-label="Navigate to Featured Projects section"
+        >
+          <SVGProjects class="h-6" />
+        </a>
       </li>
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
+        role="presentation"
       >
-        <a @click.prevent="navigate('#about')"><SVGPerson class="h-6" /></a>
+        <a
+          @click.prevent="navigate('#about')"
+          aria-label="Navigate to About section"
+        >
+          <SVGPerson class="h-6" />
+        </a>
       </li>
       <li
         class="navlistitem list-none shadow-sm transition-all hover:translate-y-[-0.125rem]"
+        role="presentation"
       >
-        <a @click.prevent="navigate('#stack')"><SVGStack class="h-6" /></a>
+        <a
+          @click.prevent="navigate('#stack')"
+          aria-label="Navigate to Stack section"
+        >
+          <SVGStack class="h-6" />
+        </a>
       </li>
     </ul>
   </nav>

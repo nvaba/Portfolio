@@ -1,5 +1,9 @@
 <template>
-  <article class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4">
+  <article
+    class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
+    role="region"
+    aria-label="Currently Learning or Plan to Learn"
+  >
     <h3 class="px-4">Currently Learning or Plan to Learn</h3>
 
     <div
@@ -11,6 +15,8 @@
         v-for="stackItem in languageItem.acf.plan_to_learn_repeater"
         :key="stackItem.plan_name"
         class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
+        role="listitem"
+        aria-label="Plan to Learn Item"
       >
         <div>
           <img

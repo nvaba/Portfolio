@@ -15,7 +15,11 @@
         </p>
       </header>
       <DesktopNav />
-      <a class="lg:hidden" href="#featured-projects">
+      <a
+        aria-label="Skip to content"
+        class="lg:hidden"
+        href="#featured-projects"
+      >
         <DownSVG />
       </a>
       <DesktopFooter />

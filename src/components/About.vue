@@ -1,7 +1,7 @@
 <template>
   <section class="fade-in-slide-up shadow-lg" v-if="aboutContent.length > 0">
     <h2 id="about" class="mt-[5rem]">About</h2>
-    <article class="rounded-lg bg-accordion">
+    <article class="rounded-lg bg-accordion" aria-labelledby="about">
       <ul
         class="about-list mt-2 flex flex-col gap-4 rounded-lg px-2 py-4 sm:px-4"
       >

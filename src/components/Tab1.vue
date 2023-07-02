@@ -1,15 +1,21 @@
 <template>
-  <article class="mt-8">
+  <article class="mt-8" role="region" aria-label="Tab 1 Content">
     <h4>{{ props.item.acf.tab_1_content.tab_1_content_title }}</h4>
 
     <div class="my-6 text-center">
       <div
         class="learnlist inline-block max-w-[80%] text-left text-[0.95rem] text-headingtext"
         v-html="props.item.acf.tab_1_content.tab_1_content_list"
+        role="list"
+        aria-label="List of items learned"
       ></div>
     </div>
 
-    <p class="mt-5 text-[0.95rem] text-text">
+    <p
+      class="mt-5 text-[0.95rem] text-text"
+      role="textbox"
+      aria-label="Text Area"
+    >
       {{ props.item.acf.tab_1_content.tab_1_content_text_area }}
     </p>
   </article>
