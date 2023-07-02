@@ -6,7 +6,7 @@
       class="accordion group mt-2 rounded-lg bg-accordion px-2 py-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:px-4"
       v-for="item in accordionItems"
       :key="item.id"
-      role="region"
+      role="tablist"
       :aria-labelledby="'accordion-heading-' + item.id"
     >
       <div
@@ -103,7 +103,6 @@ onMounted(async () => {
       "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects?acf_format=standard"
     );
     accordionItems.value = response.data; // Assuming the API response is an array of accordion items
-    console.log("Accordion items:", accordionItems.value);
   } catch (error) {
     console.error("Failed to fetch accordion items:", error);
   }
@@ -149,17 +148,4 @@ const toggleAccordion = (itemId: number) => {
 .accordion:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05), 0 6px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* .fade-enter-active {
-  transition: opacity 0.5s;
-}
-
-.fade-leave-active {
-  transition: opacity 0s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-} */
 </style>

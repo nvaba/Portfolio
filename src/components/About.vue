@@ -39,8 +39,6 @@ onMounted(async () => {
       "https://nateabaria.ca/naportfolio/wp-json/wp/v2/about"
     );
     aboutContent.value = response.data;
-
-    console.log(aboutContent.value[0].acf.about_repeater);
   } catch (error) {
     console.error("Failed to fetch about items:", error);
   }

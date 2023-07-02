@@ -58,8 +58,6 @@ onMounted(async () => {
       "https://nateabaria.ca/naportfolio/wp-json/wp/v2/stack?acf_format=standard"
     );
     languageItems.value = response.data;
-
-    console.log(languageItems.value[0].acf.software_and_programs_repeater);
   } catch (error) {
     console.error("Failed to fetch about items:", error);
   }

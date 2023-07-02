@@ -37,7 +37,6 @@ interface AccordionContentProps {
 
 // Define the props
 const props = defineProps<AccordionContentProps>();
-// console.log(props.item.acf.tab_1_content.tab_1_content_list);
 </script>
 
 <style>
