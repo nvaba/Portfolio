@@ -1,17 +1,21 @@
 <template>
-  <article class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4">
+  <article
+    class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
+    tabindex="0"
+  >
     <h3 class="px-4">Software and Programs</h3>
-
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.software_and_programs_repeater[0].software_name"
       class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
+      role="region"
+      aria-label="Software and Programs"
     >
       <div
         v-for="stackItem in languageItem.acf.software_and_programs_repeater"
         :key="stackItem.software_name"
         class="flex items-center gap-2 overflow-hidden rounded-md bg-panel px-1 py-2 transition-transform hover:translate-y-[-0.125rem]"
-        aria-label="Software and program items"
+        role="listitem"
       >
         <div>
           <img
