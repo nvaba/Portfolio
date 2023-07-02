@@ -1,5 +1,5 @@
 <template>
-  <section class="fade-in-slide-up lg:mt-20">
+  <section class="fade-in-slide-up lg:mt-20" @keydown.tab="handleTabKey">
     <h2 id="featured-projects">Featured Projects</h2>
     <!-- div below is where border goes border-b border-text -->
     <div
@@ -8,6 +8,8 @@
       :key="item.id"
       role="tablist"
       :aria-labelledby="'accordion-heading-' + item.id"
+      tabindex="0"
+      @keydown.space.prevent="toggleAccordion(item.id)"
     >
       <div
         class="flex cursor-pointer items-center justify-between transition-transform"
@@ -15,6 +17,7 @@
         :id="'accordion-heading-' + item.id"
         role="button"
         :aria-expanded="activeAccordionItem === item.id"
+        tabindex="0"
       >
         <h3>{{ item.title.rendered }}</h3>
         <SvgArrow :active="activeAccordionItem === item.id" />
@@ -31,6 +34,7 @@
         <div
           class="mt-1 hidden overflow-hidden rounded-md lg:block"
           v-if="activeAccordionItem !== item.id"
+          tabindex="0"
         >
           <img
             class="h-32 w-full rounded-md object-cover brightness-[0.5] transition-all group-hover:scale-105 group-hover:brightness-75"
@@ -41,13 +45,14 @@
         </div>
       </transition>
       <transition name="accordion">
-        <div v-show="activeAccordionItem === item.id" class="mt-2">
+        <div v-show="activeAccordionItem === item.id" class="mt-2" tabindex="0">
           <AccordionContent :item="item" />
         </div>
       </transition>
     </div>
   </section>
 </template>
+
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import axios from "axios";
@@ -113,6 +118,27 @@ const activeAccordionItem = ref<number | null>(null);
 const toggleAccordion = (itemId: number) => {
   activeAccordionItem.value =
     activeAccordionItem.value === itemId ? null : itemId;
+};
+
+const handleTabKey = (event: KeyboardEvent) => {
+  const focusableElements = Array.from(
+    document.querySelectorAll(
+      '.accordion[role="tablist"] [role="button"], .accordion[role="tablist"] [role="tabpanel"]'
+    )
+  ) as HTMLElement[];
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (event.target === lastElement && !event.shiftKey) {
+    // Last element, Tab pressed without Shift
+    event.preventDefault();
+    firstElement.focus();
+  } else if (event.target === firstElement && event.shiftKey) {
+    // First element, Tab pressed with Shift
+    event.preventDefault();
+    lastElement.focus();
+  }
 };
 </script>
 
