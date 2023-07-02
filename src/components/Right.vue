@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     id="right"
     class="overflow-auto lg:ml-auto lg:w-1/2 lg:border-l lg:border-bordergray lg:px-16 xl:px-32"
   >
@@ -8,7 +8,7 @@
     <About />
     <Stack />
     <MobileFooter />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
