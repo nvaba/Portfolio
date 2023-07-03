@@ -3,13 +3,15 @@
     class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
     tabindex="0"
   >
-    <h3 class="px-4">Currently Learning or Plan to Learn</h3>
+    <h3 class="px-4" id="learning-plans-heading">
+      Currently Learning or Plan to Learn
+    </h3>
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.plan_to_learn_repeater[0].plan_name"
       class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
-      role="region"
-      aria-label="Currently Learning or Plan to Learn"
+      role="list"
+      aria-labelledby="learning-plans-heading"
     >
       <div
         v-for="stackItem in languageItem.acf.plan_to_learn_repeater"

@@ -3,13 +3,13 @@
     class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
     tabindex="0"
   >
-    <h3 class="px-4">Software and Programs</h3>
+    <h3 class="px-4" id="software-programs-heading">Software and Programs</h3>
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.software_and_programs_repeater[0].software_name"
       class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
-      role="region"
-      aria-label="Software and Programs"
+      role="list"
+      aria-labelledby="software-programs-heading"
     >
       <div
         v-for="stackItem in languageItem.acf.software_and_programs_repeater"

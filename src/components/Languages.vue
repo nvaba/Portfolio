@@ -8,7 +8,7 @@
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0].stack_name"
       class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-2 sm:px-4"
-      role="region"
+      role="list"
       aria-labelledby="developer-stack"
     >
       <div

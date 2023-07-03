@@ -1,22 +1,18 @@
 <template>
   <section class="fade-in-slide-up lg:mt-20" @keydown.tab="handleTabKey">
     <h2 id="featured-projects">Featured Projects</h2>
-    <!-- div below is where border goes border-b border-text -->
     <div
       class="accordion group mt-2 rounded-lg bg-accordion px-2 py-4 transition-all hover:translate-y-[-0.125rem] hover:bg-divhover sm:px-4"
       v-for="item in accordionItems"
       :key="item.id"
-      role="tablist"
-      :aria-labelledby="'accordion-heading-' + item.id"
-      tabindex="0"
-      @keydown.space.prevent="toggleAccordion(item.id)"
     >
       <div
         class="flex cursor-pointer items-center justify-between transition-transform"
-        @click="toggleAccordion(item.id)"
         :id="'accordion-heading-' + item.id"
-        role="button"
+        role="tab"
         :aria-expanded="activeAccordionItem === item.id"
+        @click="toggleAccordion(item.id)"
+        @keydown.space.prevent="toggleAccordion(item.id)"
         tabindex="0"
       >
         <h3>{{ item.title.rendered }}</h3>
@@ -34,7 +30,6 @@
         <div
           class="mt-1 hidden overflow-hidden rounded-md lg:block"
           v-if="activeAccordionItem !== item.id"
-          tabindex="0"
         >
           <img
             class="h-32 w-full rounded-md object-cover brightness-[0.5] transition-all group-hover:scale-105 group-hover:brightness-75"
@@ -45,7 +40,11 @@
         </div>
       </transition>
       <transition name="accordion">
-        <div v-show="activeAccordionItem === item.id" class="mt-2" tabindex="0">
+        <div
+          v-show="activeAccordionItem === item.id"
+          class="mt-2"
+          role="tabpanel"
+        >
           <AccordionContent :item="item" />
         </div>
       </transition>

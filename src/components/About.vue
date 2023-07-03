@@ -19,7 +19,7 @@
           :key="item.about_heading"
           role="listitem"
         >
-          <h4 class="text-headingtext">{{ item.about_heading }}</h4>
+          <h3 class="text-headingtext">{{ item.about_heading }}</h3>
           <p>{{ item.about_text_area }}</p>
         </li>
       </ul>

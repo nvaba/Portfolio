@@ -38,7 +38,7 @@
             :class="{ active: activeTab === 'tab1' }"
             aria-selected="true"
             role="tab"
-            id="tab1"
+            :id="'tab1-' + props.item.id"
           >
             {{ props.item.acf.tab_1_category }}
           </button>
@@ -50,7 +50,7 @@
             :class="{ active: activeTab === 'tab2' }"
             aria-selected="false"
             role="tab"
-            id="tab2"
+            :id="'tab2-' + props.item.id"
           >
             {{ props.item.acf.tab_2_category }}
           </button>
@@ -62,7 +62,7 @@
             :class="{ active: activeTab === 'tab3' }"
             aria-selected="false"
             role="tab"
-            id="tab3"
+            :id="'tab3-' + props.item.id"
           >
             {{ props.item.acf.tab_3_category }}
           </button>
@@ -176,8 +176,4 @@ onUpdated(() => {
 .tab.active::after {
   transform: scaleX(1);
 }
-
-/* .swiper, .swiper-container {
-  position: static;
-} */
 </style>
