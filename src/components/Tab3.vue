@@ -1,5 +1,9 @@
 <template>
   <Swiper
+    v-if="
+      item.acf.tab_3_repeater_content &&
+      item.acf.tab_3_repeater_content.length > 0
+    "
     :pagination="{
       type: 'progressbar',
     }"
@@ -21,11 +25,14 @@
       aria-label="Tab 3 Slide"
     >
       <article>
-        <h4 class="mt-8">{{ section.tab_3_content_title }}</h4>
+        <h4 class="mt-8" v-if="section.tab_3_content_title">
+          {{ section.tab_3_content_title }}
+        </h4>
         <p
           class="mt-2 text-[0.95rem] text-text"
           role="textbox"
           aria-label="Tab 3 Text Area"
+          v-if="section.tab_3_text_area"
         >
           {{ section.tab_3_text_area }}
         </p>
@@ -71,12 +78,10 @@ interface AccordionContentProps {
     id: number;
     acf: {
       tab_3_repeater_content: {
-        tab_3_content_title: string;
-        tab_3_text_area: string;
+        tab_3_content_title?: string;
+        tab_3_text_area?: string;
       }[];
-      // Add more properties as needed
     };
-    // Add more properties as needed
   };
 }
 </script>

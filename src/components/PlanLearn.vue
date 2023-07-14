@@ -8,7 +8,7 @@
     </h3>
     <div
       v-for="languageItem in languageItems"
-      :key="languageItem.acf.plan_to_learn_repeater[0].plan_name"
+      :key="languageItem.acf.plan_to_learn_repeater[0]?.plan_name"
       class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
       role="list"
       aria-labelledby="learning-plans-heading"
@@ -21,16 +21,20 @@
       >
         <div>
           <img
+            v-if="stackItem.plan_image"
             class="block max-h-[30px] max-w-[30px] rounded-xl grayscale xs:max-h-[40px] xs:max-w-[40px] xl:max-h-[50px] xl:max-w-[50px]"
-            :src="stackItem.plan_image.url"
-            :alt="stackItem.plan_image.alt"
+            :src="stackItem.plan_image?.url"
+            :alt="stackItem.plan_image?.alt"
           />
         </div>
         <div class="flex flex-col">
-          <h4 class="text-[0.8rem] sm:text-base">
+          <h4 v-if="stackItem.plan_name" class="text-[0.8rem] sm:text-base">
             {{ stackItem.plan_name }}
           </h4>
-          <p class="text-[0.6rem] text-text xs:text-[0.7rem] sm:text-[0.8rem]">
+          <p
+            v-if="stackItem.plan_desc"
+            class="text-[0.6rem] text-text xs:text-[0.7rem] sm:text-[0.8rem]"
+          >
             {{ stackItem.plan_desc }}
           </p>
         </div>
@@ -43,16 +47,20 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
+interface StackImage {
+  url: string;
+  alt: string;
+}
+
+interface StackItem {
+  plan_name?: string;
+  plan_desc?: string;
+  plan_image?: StackImage;
+}
+
 interface LanguageItem {
   acf: {
-    plan_to_learn_repeater: {
-      plan_name: string;
-      plan_desc: string;
-      plan_image: {
-        url: string;
-        alt: string;
-      };
-    }[];
+    plan_to_learn_repeater: StackItem[];
   };
 }
 

@@ -1,8 +1,13 @@
 <template>
   <article class="mt-8" role="region" aria-label="Tab 1 Content">
-    <h4>{{ props.item.acf.tab_1_content.tab_1_content_title }}</h4>
+    <h4 v-if="props.item.acf.tab_1_content.tab_1_content_title">
+      {{ props.item.acf.tab_1_content.tab_1_content_title }}
+    </h4>
 
-    <div class="my-6 text-center">
+    <div
+      class="my-6 text-center"
+      v-if="props.item.acf.tab_1_content.tab_1_content_list"
+    >
       <div
         class="learnlist inline-block max-w-[80%] text-left text-[0.95rem] text-headingtext"
         v-html="props.item.acf.tab_1_content.tab_1_content_list"
@@ -15,6 +20,7 @@
       class="mt-5 text-[0.95rem] text-text"
       role="textbox"
       aria-label="Text Area"
+      v-if="props.item.acf.tab_1_content.tab_1_content_text_area"
     >
       {{ props.item.acf.tab_1_content.tab_1_content_text_area }}
     </p>
@@ -27,9 +33,9 @@ interface AccordionContentProps {
     id: number;
     acf: {
       tab_1_content: {
-        tab_1_content_title: string;
-        tab_1_content_list: string;
-        tab_1_content_text_area: string;
+        tab_1_content_title?: string;
+        tab_1_content_list?: string;
+        tab_1_content_text_area?: string;
       };
     };
   };

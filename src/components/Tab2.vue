@@ -1,5 +1,9 @@
 <template>
   <Swiper
+    v-if="
+      item.acf.tab_2_repeater_content &&
+      item.acf.tab_2_repeater_content.length > 0
+    "
     :pagination="{
       type: 'progressbar',
     }"
@@ -22,11 +26,13 @@
       aria-label="Tab 2 Slide"
     >
       <article>
-        <h4 class="mt-8">{{ section.tab_2_content_title }}</h4>
-        <div class="imagediv mt-4">
+        <h4 class="mt-8" v-if="section.tab_2_content_title">
+          {{ section.tab_2_content_title }}
+        </h4>
+        <div class="imagediv mt-4" v-if="section.tab_2_content_preview">
           <img
-            :src="section.tab_2_content_preview.url"
-            :alt="section.tab_2_content_preview.alt"
+            :src="section.tab_2_content_preview?.url"
+            :alt="section.tab_2_content_preview?.alt"
             class="h-full max-h-[338px] w-full flex-shrink-0 flex-grow-0 object-fill"
           />
         </div>
@@ -34,6 +40,7 @@
           class="mt-5 flex-grow-0 text-[0.95rem] text-text"
           role="textbox"
           aria-label="Tab 2 Text Area"
+          v-if="section.tab_2_text_area"
         >
           {{ section.tab_2_text_area }}
         </p>
@@ -79,12 +86,12 @@ interface AccordionContentProps {
     id: number;
     acf: {
       tab_2_repeater_content: {
-        tab_2_content_title: string;
-        tab_2_content_preview: {
+        tab_2_content_title?: string;
+        tab_2_content_preview?: {
           url: string;
           alt: string;
         };
-        tab_2_text_area: string;
+        tab_2_text_area?: string;
       }[];
     };
   };
