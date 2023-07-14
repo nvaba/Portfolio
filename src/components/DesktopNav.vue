@@ -45,7 +45,6 @@ import SVGProjects from "./SVGProjects.vue";
 import SVGPerson from "./SVGPerson.vue";
 import SVGStack from "./SVGStack.vue";
 
-// Handle click event on navigation links
 const navigate = (anchor: string) => {
   const targetElement = document.querySelector(anchor);
   if (targetElement) {

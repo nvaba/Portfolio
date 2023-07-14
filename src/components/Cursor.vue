@@ -117,7 +117,6 @@ class MouseFollow {
       this.move.y = this.mousePos.y;
     }
 
-    //rotation
     let distanceCircleToMouse = {
       x: Math.round((this.mousePos.x - this.move.x) * 100) / 100,
       y: Math.round((this.mousePos.y - this.move.y) * 100) / 100,

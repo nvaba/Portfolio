@@ -62,15 +62,12 @@ const copyEmail = () => {
   navigator.clipboard
     .writeText("nateaba@gmail.com")
     .then(() => {
-      // Show a message saying that the email was copied
       buttonText.value = "Email Copied!";
-      // Change back to original text after 3 seconds
       setTimeout(() => {
         buttonText.value = "Copy Email";
       }, 2000);
     })
     .catch((err) => {
-      // Could not copy text: display a warning
       console.warn("Could not copy email", err);
     });
 };

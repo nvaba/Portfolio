@@ -108,7 +108,7 @@ onMounted(async () => {
     const response = await axios.get(
       "https://nateabaria.ca/naportfolio/wp-json/wp/v2/naportfolio_projects?acf_format=standard"
     );
-    accordionItems.value = response.data; // Assuming the API response is an array of accordion items
+    accordionItems.value = response.data;
   } catch (error) {
     console.error("Failed to fetch accordion items:", error);
   }
@@ -132,11 +132,9 @@ const handleTabKey = (event: KeyboardEvent) => {
   const lastElement = focusableElements[focusableElements.length - 1];
 
   if (event.target === lastElement && !event.shiftKey) {
-    // Last element, Tab pressed without Shift
     event.preventDefault();
     firstElement.focus();
   } else if (event.target === firstElement && event.shiftKey) {
-    // First element, Tab pressed with Shift
     event.preventDefault();
     lastElement.focus();
   }

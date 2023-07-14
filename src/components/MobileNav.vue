@@ -22,7 +22,6 @@
           ><SVGProjects
         /></a>
       </li>
-      <!-- <li><a @click.prevent="navigate('#visual-arts')"><SVGArt /></a></li> -->
       <li class="navlistitem list-none" role="presentation">
         <a
           @click.prevent="navigate('#about')"
