@@ -1,13 +1,13 @@
 <template>
   <article
-    class="my-2 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
+    class="my-3 rounded-lg bg-accordion py-2 shadow-lg sm:py-4"
     tabindex="0"
   >
     <h3 class="px-4" id="developer-stack">Developer Stack</h3>
     <div
       v-for="languageItem in languageItems"
       :key="languageItem.acf.stack_repeater[0]?.stack_name"
-      class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-2 sm:px-4"
+      class="mt-2 grid grid-cols-2 gap-2 rounded-lg px-4"
       role="list"
       aria-labelledby="developer-stack"
     >
