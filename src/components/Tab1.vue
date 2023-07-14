@@ -47,6 +47,6 @@ const props = defineProps<AccordionContentProps>();
 
 <style>
 .learnlist li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
 }
 </style>
