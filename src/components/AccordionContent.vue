@@ -33,7 +33,7 @@
           <button
             aria-controls="tab1-content"
             ref="tabs"
-            class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
+            class="tab mr-[0.5rem] text-[0.85rem] hover:text-headingtext lg:text-[0.9rem]"
             @click="activeTab = 'tab1'"
             :class="{ active: activeTab === 'tab1' }"
             aria-selected="true"
@@ -45,7 +45,7 @@
           <button
             aria-controls="tab2-content"
             ref="tabs"
-            class="tab mr-[0.5rem] text-[0.85rem] lg:text-[0.9rem]"
+            class="tab mr-[0.5rem] text-[0.85rem] hover:text-headingtext lg:text-[0.9rem]"
             @click="activeTab = 'tab2'"
             :class="{ active: activeTab === 'tab2' }"
             aria-selected="false"
@@ -57,7 +57,7 @@
           <button
             aria-controls="tab3-content"
             ref="tabs"
-            class="tab text-[0.85rem] lg:text-[0.9rem]"
+            class="tab text-[0.85rem] hover:text-headingtext lg:text-[0.9rem]"
             @click="activeTab = 'tab3'"
             :class="{ active: activeTab === 'tab3' }"
             aria-selected="false"
